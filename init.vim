@@ -44,8 +44,9 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'mhinz/vim-signify'
 Plug 'mattn/emmet-vim'
 " Dracula theme setup
-Plug 'Mofiqul/dracula.nvim'
-let g:dracula_transparent_bg = v:true
+Plug 'dracula/vim', { 'as': 'dracula' }
+let g:dracula_italic = 0
+let g:dracula_colorterm = 0
 
 Plug 'wavded/vim-stylus'
 " Detect when file has been edited outside of vim
@@ -83,6 +84,7 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'rmagatti/goto-preview'
 Plug 'rcarriga/nvim-notify'
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'crispgm/nvim-tabline'
 
 " Initialize plugin system
 call plug#end()
@@ -92,9 +94,10 @@ lua << EOF
 	require('null-ls-setup')
 	require('lualine-setup')
 	require('notify-setup')
-	require('barbar-setup')
 	require('goto-preview').setup {}
-
+	require('tabline').setup({
+		modify_indicator = '●',
+	})
 EOF
 
 map <C-n> :NERDTreeToggle<CR>
