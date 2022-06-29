@@ -76,7 +76,6 @@ Plug 'wbthomason/packer.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
-Plug 'jose-elias-alvarez/null-ls.nvim'
 
 Plug 'rmagatti/goto-preview'
 Plug 'rcarriga/nvim-notify'
@@ -90,7 +89,6 @@ call plug#end()
 
 lua << EOF
 	require('lsp-ts-setup')
-	require('null-ls-setup')
 	require('lualine-setup')
 	require('notify-setup')
 	require('goto-preview').setup {}

@@ -75,3 +75,23 @@ lsp.tsserver.setup(coq.lsp_ensure_capabilities({
 		on_attach(client, bufnr)
 	end
 }))
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+lsp.eslint.setup({
+  capabilities = capabilities,
+  flags = { debounce_text_changes = 500 },
+  on_attach = function(client, bufnr)
+    client.resolved_capabilities.document_formatting = true
+    if client.resolved_capabilities.document_formatting then
+      local au_lsp = vim.api.nvim_create_augroup("eslint_lsp", { clear = true })
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*",
+        callback = function()
+          vim.lsp.buf.formatting_sync()
+        end,
+        group = au_lsp,
+      })
+    end
+  end,
+})
