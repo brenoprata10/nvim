@@ -44,9 +44,8 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'mhinz/vim-signify'
 Plug 'mattn/emmet-vim'
 " Dracula theme setup
-Plug 'dracula/vim', { 'as': 'dracula' }
-let g:dracula_italic = 0
-let g:dracula_colorterm = 0
+Plug 'Mofiqul/dracula.nvim'
+let g:dracula_transparent_bg = v:true
 
 Plug 'wavded/vim-stylus'
 " Detect when file has been edited outside of vim
@@ -72,8 +71,6 @@ Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 
 " Coq
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 let g:coq_settings = { 'auto_start': 'shut-up', 'keymap': {'jump_to_mark': 'null'} }
 
 " LSP support
@@ -87,6 +84,13 @@ Plug 'rmagatti/goto-preview'
 Plug 'rcarriga/nvim-notify'
 Plug 'nvim-lualine/lualine.nvim'
 
+Plug 'romgrk/barbar.nvim'
+let bufferline = get(g:, 'bufferline', {})
+let bufferline.auto_hide = v:true
+let bufferline.animation = v:true
+let bufferline.tabpages = v:false
+let bufferline.icons = 'numbers'
+
 " Initialize plugin system
 call plug#end()
 
@@ -95,7 +99,9 @@ lua << EOF
 	require('null-ls-setup')
 	require('lualine-setup')
 	require('notify-setup')
+	require('barbar-setup')
 	require('goto-preview').setup {}
+
 EOF
 
 map <C-n> :NERDTreeToggle<CR>
@@ -121,6 +127,9 @@ nmap gP <plug>(YoinkPaste_gP)
 map <C-g> :Gvdiffsplit!<CR>
 nnoremap glb :diffget //2<CR>
 nnoremap grb :diffget //3<CR>
+
+nnoremap <silent> < :BufferMovePrevious<CR>
+nnoremap <silent> > :BufferMoveNext<CR>
 
 colorscheme dracula
 highlight Normal ctermbg=NONE
