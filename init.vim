@@ -28,39 +28,26 @@ set wildignore+=*/node_modules/*
 " diagnostics appear/become resolved.
 set signcolumn=yes
 
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
-
-Plug 'jaxbot/semantic-highlight.vim'
-Plug 'leafgarland/typescript-vim'
-
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'ryanoasis/vim-devicons'
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
-" Plugin options
 
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
+Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 
-Plug 'preservim/nerdtree'
-
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" Shows modified lines on left column
 Plug 'mhinz/vim-signify'
-Plug 'styled-components/vim-styled-components'
 Plug 'mattn/emmet-vim'
-Plug 'udalov/kotlin-vim'
 " Dracula theme setup
 Plug 'dracula/vim', { 'as': 'dracula' }
 let g:dracula_italic = 0
 let g:dracula_colorterm = 0
 
 Plug 'wavded/vim-stylus'
+" Detect when file has been edited outside of vim
 Plug 'djoshea/vim-autoread'
+" Git Wrapper
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
 Plug 'pechorin/any-jump.vim'
@@ -72,10 +59,9 @@ let g:asyncrun_open = 8
 Plug 'svermeulen/vim-yoink'
 Plug 'tpope/vim-surround'
 
-"Fzf lua
-Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 " Icon Support
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 "SnipRun
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
@@ -95,8 +81,9 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 
 Plug 'rmagatti/goto-preview'
 Plug 'rcarriga/nvim-notify'
-
 Plug 'nvim-lualine/lualine.nvim'
+" Smart Highlight
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Initialize plugin system
 call plug#end()
