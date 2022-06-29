@@ -55,7 +55,7 @@ lsp.tsserver.setup(coq.lsp_ensure_capabilities({
 			auto_inlay_hints = true,
 			inlay_hints_highlight = "Comment",
 			inlay_hints_priority = 200, -- priority of the hint extmarks
-			inlay_hints_throttle = 150, -- throttle the inlay hint request
+			inlay_hints_throttle = 300, -- throttle the inlay hint request
 			inlay_hints_format = { -- format options for individual hint kind
 				Type = { highlight = nil, text = nil },
 				Parameter = { highlight = nil, text = nil },
