@@ -30,6 +30,10 @@ set signcolumn=yes
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'jaxbot/semantic-highlight.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
@@ -82,8 +86,6 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'rmagatti/goto-preview'
 Plug 'rcarriga/nvim-notify'
 Plug 'nvim-lualine/lualine.nvim'
-" Smart Highlight
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Initialize plugin system
 call plug#end()
