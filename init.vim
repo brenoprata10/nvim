@@ -30,10 +30,6 @@ set signcolumn=yes
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'jaxbot/semantic-highlight.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
@@ -72,7 +68,8 @@ Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 
 " Coq
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-let g:coq_settings = { 'auto_start': 'shut-up', 'keymap': {'jump_to_mark': 'null'} }
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+let g:coq_settings = { 'auto_start': 'shut-up', 'keymap': {'jump_to_mark': '<c-x>'} }
 
 " LSP support
 Plug 'wbthomason/packer.nvim'
@@ -85,6 +82,8 @@ Plug 'rmagatti/goto-preview'
 Plug 'rcarriga/nvim-notify'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'crispgm/nvim-tabline'
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Initialize plugin system
 call plug#end()
