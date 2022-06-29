@@ -89,7 +89,6 @@ let bufferline = get(g:, 'bufferline', {})
 let bufferline.auto_hide = v:true
 let bufferline.animation = v:true
 let bufferline.tabpages = v:false
-let bufferline.icons = 'numbers'
 
 " Initialize plugin system
 call plug#end()
@@ -130,6 +129,17 @@ nnoremap grb :diffget //3<CR>
 
 nnoremap <silent> < :BufferMovePrevious<CR>
 nnoremap <silent> > :BufferMoveNext<CR>
+nnoremap <silent> <gt1> <Cmd>BufferGoto 1<CR>
+nnoremap <silent> <gt2> <Cmd>BufferGoto 2<CR>
+nnoremap <silent> <gt3> <Cmd>BufferGoto 3<CR>
+nnoremap <silent> <gt4> <Cmd>BufferGoto 4<CR>
+nnoremap <silent> <gt5> <Cmd>BufferGoto 5<CR>
+nnoremap <silent> <gt6> <Cmd>BufferGoto 6<CR>
+nnoremap <silent> <gt7> <Cmd>BufferGoto 7<CR>
+nnoremap <silent> <gt8> <Cmd>BufferGoto 8<CR>
+nnoremap <silent> <gt9> <Cmd>BufferGoto 9<CR>
+nnoremap <silent> <gT> <Cmd>BufferMovePrevious<CR>
+nnoremap <silent> <gt> <Cmd>BufferMoveNext<CR>
 
 colorscheme dracula
 highlight Normal ctermbg=NONE
