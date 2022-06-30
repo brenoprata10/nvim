@@ -92,57 +92,8 @@ lua << EOF
 	require('lsp-ts-setup')
 	require('lualine-setup')
 	require('notify-setup')
+	require('tabline-setup')
 	require('goto-preview').setup {}
-
-	local render = function(f)
-
-  f.make_tabs(function(info)
-    -- With the help of kyazdani42/nvim-web-devicons we can fetch color
-    -- associated with the filetype
-    local icon_color = f.icon_color(info.filename)
-
-    -- If this is the current tab then highlight it
-    if info.current then
-      -- We can use set_fg to change default fg color
-      -- so you won't need to specify it every time
-      f.set_fg(icon_color)
-    end
-
-    f.add( ' ' .. info.index .. ' ')
-
-    if info.filename then
-	    f.add(info.modified and '●')
-      f.add{info.filename}
-
-      -- The icon function returns a filetype icon based on the filename
-      f.add(' ' .. f.icon(info.filename))
-    else
-      f.add(info.modified and '[+]' or '[-]')
-    end
-    f.add ' '
-  end)
-
-  -- Let's add a spacer wich will justify the rest of the tabline to the right
-  f.add_spacer()
-
-  -- get some info from lsp
-  local errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
-  local warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
-
-  -- and display it
-  f.add { '  ' .. errors, fg = "#e86671" }
-  f.add { '  ' .. warnings, fg = "#e5c07b"}
-  f.add ' '
-end
-require('tabline_framework').setup { 
-	render = render,
-	-- Default color of tabline items: tabs/bufs
-  -- if not set TF uses TabLine highlight group colors
-  hl = { fg = "white" ,bg = "#323952" },
-  -- Default color of everything except items
-  -- if not set TF uses TabLineFill highlight group colors
-  hl_fill = { fg = "#4b7384" ,bg ="#161421" },
-	}
 EOF
 
 map <C-n> :NERDTreeToggle<CR>
