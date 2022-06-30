@@ -1,4 +1,10 @@
-vim.notify = require("notify")
+local notify = require("notify")
+
+notify.setup {
+	background_colour = '#161421'
+}
+
+vim.notify = notify
 vim.lsp.handlers['window/showMessage'] = function(_, result, ctx)
 	local client = vim.lsp.get_client_by_id(ctx.client_id)
   	local lvl = ({
