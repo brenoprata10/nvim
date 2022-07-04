@@ -66,10 +66,15 @@ Plug 'ryanoasis/vim-devicons'
 "SnipRun
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 
-" Coq
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-let g:coq_settings = { 'auto_start': 'shut-up', 'keymap': {'jump_to_mark': '<c-x>'} }
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+" Snippets
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'rafamadriz/friendly-snippets'
 
 " LSP support
 Plug 'wbthomason/packer.nvim'
