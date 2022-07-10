@@ -2,6 +2,7 @@
 Nvim editor config files
 
 ## Other stuff to install
+- Plug for neovim/vim
 - Zsh
 - powerline10k
 - zsh-autosuggestion
