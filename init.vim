@@ -20,6 +20,7 @@ set hidden
 set cmdheight=2
 set shortmess+=c
 set relativenumber
+set clipboard+=unnamedplus
 
 " Ignore node_modules
 set wildignore+=*/node_modules/*
