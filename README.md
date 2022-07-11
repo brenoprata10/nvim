@@ -11,6 +11,8 @@ Nvim editor config files
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 - [Node](https://www.stewright.me/2022/01/tutorial-install-nodejs-16-on-ubuntu-20-04/)
+- [typescript-language-server](https://www.npmjs.com/package/typescript-language-server)
+- [vscode-langservers-extracted](https://github.com/hrsh7th/vscode-langservers-extracted)
 
 ## Git Config
 - Store git credentials `git config --global credential.helper store`
