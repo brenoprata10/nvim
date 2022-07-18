@@ -1,6 +1,6 @@
 local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-local attach_common = require("lua.attach-common")
+local attach_common = require("attach-common")
 
 -- This will be the path towards your sumneko folder. This is subjective
 local sumneko_root_path = os.getenv("HOME") ..

@@ -1,6 +1,6 @@
 local lsp = require "lspconfig"
 local lsp_ts_utils = require("nvim-lsp-ts-utils")
-local attach_common = require("lua.attach-common")
+local attach_common = require("attach-common")
 
 -- Setup nvim-cmp.
 local cmp = require'cmp'
