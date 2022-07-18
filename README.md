@@ -23,3 +23,4 @@ Nvim editor config files
 
 ## Install lsp servers
 - VS language servers
+- [lua-language-server](https://github.com/sumneko/lua-language-server) - Create directory under Documents/lua-language-server/bin
