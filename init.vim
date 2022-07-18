@@ -91,11 +91,17 @@ Plug 'rafcamlet/tabline-framework.nvim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+Plug 'brenoprata10/nvim-highlight-colors'
+
+" Lua plugin dev tool
+Plug 'folke/lua-dev.nvim'
+
 " Initialize plugin system
 call plug#end()
 
 lua << EOF
 	require('lsp-ts-setup')
+	require('lsp-lua-dev-setup')
 	require('lualine-setup')
 	require('notify-setup')
 	require('tabline-setup')

@@ -1,31 +1,6 @@
 local lsp = require "lspconfig"
 local lsp_ts_utils = require("nvim-lsp-ts-utils")
-
-local buf_map = function(bufnr, mode, lhs, rhs, opts)
-	vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, opts or {
-		silent = true,
-	})
-end
-
-local on_attach = function(client, bufnr)
-	vim.cmd("command! LspDef lua vim.lsp.buf.definition()")
-	vim.cmd("command! LspDefTab tab split | lua vim.lsp.buf.definition()")
-	vim.cmd("command! LspHover lua vim.lsp.buf.hover()")
-	vim.cmd("command! LspRename lua vim.lsp.buf.rename()")
-	vim.cmd("command! GoToPreview lua require('goto-preview').goto_preview_definition()")
-	vim.cmd("command! GoToPreviewImpl lua require('goto-preview').goto_preview_implementation()")
-	vim.cmd("command! CloseGoToPreview lua require('goto-preview').close_all_win()")
-	buf_map(bufnr, "n", "gd", ":LspDef<CR>")
-	buf_map(bufnr, "n", "gD", ":LspDefTab<CR>")
-	buf_map(bufnr, "n", "gi", ":LspRename<CR>")
-	buf_map(bufnr, "n", "gy", ":LspTypeDef<CR>")
-	buf_map(bufnr, "n", "<C-k>", ":LspHover<CR>")
-	buf_map(bufnr, "n", "gpd", ":GoToPreview<CR>")
-	buf_map(bufnr, "n", "gpi", ":GoToPreviewImpl<CR>")
-	buf_map(bufnr, "n", "gpc", ":CloseGoToPreview<CR>")
-	client.resolved_capabilities.document_formatting = false
-	client.resolved_capabilities.document_range_formatting = false
-end
+local attach_common = require("lua.attach-common")
 
 -- Setup nvim-cmp.
 local cmp = require'cmp'
@@ -126,9 +101,9 @@ lsp.tsserver.setup({
 		-- no default maps, so you may want to define some here
 		local opts = { silent = true }
 	
-		buf_map(bufnr, "n", "gs", ":TSLspOrganize<CR>")
-		buf_map(bufnr, "n", "go", ":TSLspImportAll<CR>")
-		on_attach(client, bufnr)
+		attach_common.buf_map(bufnr, "n", "gs", ":TSLspOrganize<CR>")
+		attach_common.buf_map(bufnr, "n", "go", ":TSLspImportAll<CR>")
+		attach_common.setup(client, bufnr)
 	end
 })
 
