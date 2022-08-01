@@ -13,6 +13,7 @@ Nvim editor config files
 - [Node](https://www.stewright.me/2022/01/tutorial-install-nodejs-16-on-ubuntu-20-04/)
 - [typescript-language-server](https://www.npmjs.com/package/typescript-language-server)
 - [vscode-langservers-extracted](https://github.com/hrsh7th/vscode-langservers-extracted)
+- [Scrcpy](https://github.com/Genymobile/scrcpy) - Mirror android screen
 
 ## Git Config
 - Store git credentials `git config --global credential.helper store`
