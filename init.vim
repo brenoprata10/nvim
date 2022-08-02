@@ -106,7 +106,9 @@ lua << EOF
 	require('notify-setup')
 	require('tabline-setup')
 	require('goto-preview').setup {}
-	require('nvim-highlight-colors').setup {}
+	require('nvim-highlight-colors').setup {
+		render = 'foreground'
+	}
 EOF
 
 map <C-n> :NERDTreeToggle<CR>
