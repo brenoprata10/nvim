@@ -107,7 +107,7 @@ lua << EOF
 	require('tabline-setup')
 	require('goto-preview').setup {}
 	require('nvim-highlight-colors').setup {
-		render = 'foreground'
+		render = 'background'
 	}
 EOF
 
