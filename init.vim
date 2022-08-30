@@ -100,6 +100,7 @@ Plug 'folke/lua-dev.nvim'
 call plug#end()
 
 lua << EOF
+	require('nvim-cmp-setup')
 	require('lsp-ts-setup')
 	require('lsp-lua-dev-setup')
 	require('lualine-setup')

@@ -7,7 +7,7 @@ local render = function(f)
 
 		if info.current then
 			f.set_fg(icon_color)
-		else 
+		else
 			f.add(info.index .. ' ')
 		end
 

@@ -22,7 +22,7 @@ local bubbles_theme = {
   	visual = {
 		a = {fg = colors.black, bg = colors.cyan} 
 	},
-  	replace = { 
+  	replace = {
 		a = {fg = colors.black, bg = colors.red} 
 	},
 
