@@ -88,7 +88,6 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'rafcamlet/tabline-framework.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'brenoprata10/nvim-highlight-colors'
-Plug 'petertriho/nvim-scrollbar'
 
 " Lua plugin dev tool
 Plug 'folke/lua-dev.nvim'
@@ -103,7 +102,6 @@ lua << EOF
 	require('lualine-setup')
 	require('notify-setup')
 	require('tabline-setup')
-	require("scrollbar").setup()
 	require('goto-preview').setup {}
 	require('nvim-highlight-colors').setup {
 		render = 'background',
