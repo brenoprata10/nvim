@@ -14,6 +14,7 @@ Nvim editor config files
 - [typescript-language-server](https://www.npmjs.com/package/typescript-language-server)
 - [vscode-langservers-extracted](https://github.com/hrsh7th/vscode-langservers-extracted)
 - [Scrcpy](https://github.com/Genymobile/scrcpy) - Mirror android screen
+- [RipGrip](https://github.com/BurntSushi/ripgrep#installation) - Better Fzf search behavior(properly excludes node_modules)
 
 ## Git Config
 - Store git credentials `git config --global credential.helper store`
