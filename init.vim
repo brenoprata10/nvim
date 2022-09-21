@@ -89,6 +89,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'brenoprata10/nvim-highlight-colors'
 Plug 'petertriho/nvim-scrollbar'
 
+Plug 'folke/trouble.nvim'
+
 " Lua plugin dev tool
 Plug 'folke/lua-dev.nvim'
 
@@ -108,6 +110,7 @@ lua << EOF
 		render = 'background',
 		enable_tailwind = true
 	}
+	require("trouble").setup {}
 EOF
 
 map <C-n> :NERDTreeToggle<CR>
@@ -133,6 +136,9 @@ nmap gP <plug>(YoinkPaste_gP)
 map <C-g> :Gvdiffsplit!<CR>
 nnoremap glb :diffget //2<CR>
 nnoremap grb :diffget //3<CR>
+
+" trouble
+nnoremap tt <cmd>TroubleToggle<cr>
 
 colorscheme dracula
 highlight Normal ctermbg=NONE
