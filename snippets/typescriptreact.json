@@ -1,0 +1,33 @@
+{
+	"log": {
+		"prefix": ["log"],
+		"body": "console.log(${1:$TM_SELECTED_TEXT});"
+	},
+	"react-component": {
+		"prefix": ["component", "react-component"],
+		"body": [
+			"export const ${1:$TM_SELECTED_TEXT} = (${2:$TM_SELECTED_TEXT}) => {",
+			"${3:$TM_SELECTED_TEXT}",
+			"}"
+		],
+		"description": "React functional component"
+	},
+	"const": {
+		"prefix": ["const"],
+		"body": [
+			"const ${1:$TM_SELECTED_TEXT} = ${2:$TM_SELECTED_TEXT}"
+		]
+	},
+	"let": {
+		"prefix": ["let"],
+		"body": [
+			"let ${1:$TM_SELECTED_TEXT} = ${2:$TM_SELECTED_TEXT}"
+		]
+	},
+	"UIKit-component": {
+		"prefix": ["<UI"],
+		"body": [
+			"<UIKit.${1:$TM_SELECTED_TEXT} />"
+		]
+	}
+}
