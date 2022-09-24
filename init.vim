@@ -74,6 +74,7 @@ Plug 'hrsh7th/nvim-cmp'
 " Snippets
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
+let g:vsnip_snippet_dir = "./snippets"
 Plug 'rafamadriz/friendly-snippets'
 
 " LSP support
