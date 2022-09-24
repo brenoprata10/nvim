@@ -108,7 +108,6 @@ lua << EOF
 	require("scrollbar").setup()
 	require('goto-preview').setup {}
 	require('nvim-highlight-colors').setup {
-		render = 'background',
 		enable_tailwind = true
 	}
 	require("trouble").setup {}

@@ -29,5 +29,573 @@
 		"body": [
 			"<UIKit.${1:$TM_SELECTED_TEXT} />"
 		]
+	},
+	"display--block": {
+		"prefix": ["display--block"],
+		"body": ["display--block"]
+	},
+	"display--flex": {
+		"prefix": ["display--flex"],
+		"body": ["display--flex"]
+	},
+	"display--inline-block": {
+		"prefix": ["display--inline-block"],
+		"body": ["display--inline-block"]
+	},
+	"display--inline": {
+		"prefix": ["display--inline"],
+		"body": ["display--inline"]
+	},
+	"display--inline-flex": {
+		"prefix": ["display--inline-flex"],
+		"body": ["display--inline-flex"]
+	},
+	"display--none": {
+		"prefix": ["display--none"],
+		"body": ["display--none"]
+	},
+	"visibility--visible": {
+		"prefix": ["visibility--visible"],
+		"body": ["visibility--visible"]
+	},
+	"visibility--hidden": {
+		"prefix": ["visibility--hidden"],
+		"body": ["visibility--hidden"]
+	},
+	"width--full": {
+		"prefix": ["width--full"],
+		"body": ["width--full"]
+	},
+	"width--half": {
+		"prefix": ["width--half"],
+		"body": ["width--half"]
+	},
+	"height--full": {
+		"prefix": ["height--full"],
+		"body": ["height--full"]
+	},
+	"height--half": {
+		"prefix": ["height--half"],
+		"body": ["height--half"]
+	},
+	"text-align--left": {
+		"prefix": ["text-align--left"],
+		"body": ["text-align--left"]
+	},
+	"text-align--center": {
+		"prefix": ["text-align--center"],
+		"body": ["text-align--center"]
+	},
+	"text-align--right": {
+		"prefix": ["text-align--right"],
+		"body": ["text-align--right"]
+	},
+	"text-decoration--none": {
+		"prefix": ["text-decoration--none"],
+		"body": ["text-decoration--none"]
+	},
+	"text-decoration--underline": {
+		"prefix": ["text-decoration--underline"],
+		"body": ["text-decoration--underline"]
+	},
+	"text-decoration--line-through": {
+		"prefix": ["text-decoration--line-through"],
+		"body": ["text-decoration--line-through"]
+	},
+	"vertical-align--top": {
+		"prefix": ["vertical-align--top"],
+		"body": ["vertical-align--top"]
+	},
+	"vertical-align--middle": {
+		"prefix": ["vertical-align--middle"],
+		"body": ["vertical-align--middle"]
+	},
+	"vertical-align--bottom": {
+		"prefix": ["vertical-align--bottom"],
+		"body": ["vertical-align--bottom"]
+	},
+	"line-height--normal": {
+		"prefix": ["line-height--normal"],
+		"body": ["line-height--normal"]
+	},
+	"line-height--unset": {
+		"prefix": ["line-height--unset"],
+		"body": ["line-height--unset"]
+	},
+	"position--static": {
+		"prefix": ["position--static"],
+		"body": ["position--static"]
+	},
+	"position--relative": {
+		"prefix": ["position--relative"],
+		"body": ["position--relative"]
+	},
+	"position--absolute": {
+		"prefix": ["position--absolute"],
+		"body": ["position--absolute"]
+	},
+	"position--fixed": {
+		"prefix": ["position--fixed"],
+		"body": ["position--fixed"]
+	},
+	"font-size--xs": {
+		"prefix": ["font-size--xs"],
+		"body": ["font-size--xs"]
+	},
+	"font-size--sm": {
+		"prefix": ["font-size--sm"],
+		"body": ["font-size--sm"]
+	},
+	"font-size--md": {
+		"prefix": ["font-size--md"],
+		"body": ["font-size--md"]
+	},
+	"font-size--lg": {
+		"prefix": ["font-size--lg"],
+		"body": ["font-size--lg"]
+	},
+	"font-size--xl": {
+		"prefix": ["font-size--xl"],
+		"body": ["font-size--xl"]
+	},
+	"disable-margin": {
+		"prefix": ["disable-margin"],
+		"body": ["disable-margin"]
+	},
+	"disable-margin--right": {
+		"prefix": ["disable-margin--right"],
+		"body": ["disable-margin--right"]
+	},
+	"disable-margin--top": {
+		"prefix": ["disable-margin--top"],
+		"body": ["disable-margin--top"]
+	},
+	"disable-margin--left": {
+		"prefix": ["disable-margin--left"],
+		"body": ["disable-margin--left"]
+	},
+	"disable-margin--bottom": {
+		"prefix": ["disable-margin--bottom"],
+		"body": ["disable-margin--bottom"]
+	},
+	"margin-left--xs": {
+		"prefix": ["margin-left--xs"],
+		"body": ["margin-left--xs"]
+	},
+	"margin-left--sm": {
+		"prefix": ["margin-left--sm"],
+		"body": ["margin-left--sm"]
+	},
+	"margin-left--md": {
+		"prefix": ["margin-left--md"],
+		"body": ["margin-left--md"]
+	},
+	"margin-left--lg": {
+		"prefix": ["margin-left--lg"],
+		"body": ["margin-left--lg"]
+	},
+	"margin-top--xs": {
+		"prefix": ["margin-top--xs"],
+		"body": ["margin-top--xs"]
+	},
+	"margin-top--sm": {
+		"prefix": ["margin-top--sm"],
+		"body": ["margin-top--sm"]
+	},
+	"margin-top--md": {
+		"prefix": ["margin-top--md"],
+		"body": ["margin-top--md"]
+	},
+	"margin-top--lg": {
+		"prefix": ["margin-top--lg"],
+		"body": ["margin-top--lg"]
+	},
+	"margin-bottom--xs": {
+		"prefix": ["margin-bottom--xs"],
+		"body": ["margin-bottom--xs"]
+	},
+	"margin-bottom--sm": {
+		"prefix": ["margin-bottom--sm"],
+		"body": ["margin-bottom--sm"]
+	},
+	"margin-bottom--md": {
+		"prefix": ["margin-bottom--md"],
+		"body": ["margin-bottom--md"]
+	},
+	"margin-bottom--lg": {
+		"prefix": ["margin-bottom--lg"],
+		"body": ["margin-bottom--lg"]
+	},
+	"margin-right--xs": {
+		"prefix": ["margin-right--xs"],
+		"body": ["margin-right--xs"]
+	},
+	"margin-right--sm": {
+		"prefix": ["margin-right--sm"],
+		"body": ["margin-right--sm"]
+	},
+	"margin-right--md": {
+		"prefix": ["margin-right--md"],
+		"body": ["margin-right--md"]
+	},
+	"margin-right--lg": {
+		"prefix": ["margin-right--lg"],
+		"body": ["margin-right--lg"]
+	},
+	"padding-left--xs": {
+		"prefix": ["padding-left--xs"],
+		"body": ["padding-left--xs"]
+	},
+	"padding-left--sm": {
+		"prefix": ["padding-left--sm"],
+		"body": ["padding-left--sm"]
+	},
+	"padding-left--md": {
+		"prefix": ["padding-left--md"],
+		"body": ["padding-left--md"]
+	},
+	"padding-left--lg": {
+		"prefix": ["padding-left--lg"],
+		"body": ["padding-left--lg"]
+	},
+	"padding-top--xs": {
+		"prefix": ["padding-top--xs"],
+		"body": ["padding-top--xs"]
+	},
+	"padding-top--sm": {
+		"prefix": ["padding-top--sm"],
+		"body": ["padding-top--sm"]
+	},
+	"padding-top--md": {
+		"prefix": ["padding-top--md"],
+		"body": ["padding-top--md"]
+	},
+	"padding-top--lg": {
+		"prefix": ["padding-top--lg"],
+		"body": ["padding-top--lg"]
+	},
+	"padding-bottom--xs": {
+		"prefix": ["padding-bottom--xs"],
+		"body": ["padding-bottom--xs"]
+	},
+	"padding-bottom--sm": {
+		"prefix": ["padding-bottom--sm"],
+		"body": ["padding-bottom--sm"]
+	},
+	"padding-bottom--md": {
+		"prefix": ["padding-bottom--md"],
+		"body": ["padding-bottom--md"]
+	},
+	"padding-bottom--lg": {
+		"prefix": ["padding-bottom--lg"],
+		"body": ["padding-bottom--lg"]
+	},
+	"padding-right--xs": {
+		"prefix": ["padding-right--xs"],
+		"body": ["padding-right--xs"]
+	},
+	"padding-right--sm": {
+		"prefix": ["padding-right--sm"],
+		"body": ["padding-right--sm"]
+	},
+	"padding-right--md": {
+		"prefix": ["padding-right--md"],
+		"body": ["padding-right--md"]
+	},
+	"padding-right--lg": {
+		"prefix": ["padding-right--lg"],
+		"body": ["padding-right--lg"]
+	},
+	"disable-padding": {
+		"prefix": ["disable-padding"],
+		"body": ["disable-padding"]
+	},
+	"disable-padding--right": {
+		"prefix": ["disable-padding--right"],
+		"body": ["disable-padding--right"]
+	},
+	"disable-padding--top": {
+		"prefix": ["disable-padding--top"],
+		"body": ["disable-padding--top"]
+	},
+	"disable-padding--left": {
+		"prefix": ["disable-padding--left"],
+		"body": ["disable-padding--left"]
+	},
+	"disable-padding--bottom": {
+		"prefix": ["disable-padding--bottom"],
+		"body": ["disable-padding--bottom"]
+	},
+	"white-space--nowrap": {
+		"prefix": ["white-space--nowrap"],
+		"body": ["white-space--nowrap"]
+	},
+	"white-space--normal": {
+		"prefix": ["white-space--normal"],
+		"body": ["white-space--normal"]
+	},
+	"justify-content--flex-start": {
+		"prefix": ["justify-content--flex-start"],
+		"body": ["justify-content--flex-start"]
+	},
+	"justify-content--flex-end": {
+		"prefix": ["justify-content--flex-end"],
+		"body": ["justify-content--flex-end"]
+	},
+	"justify-content--center": {
+		"prefix": ["justify-content--center"],
+		"body": ["justify-content--center"]
+	},
+	"justify-content--space-between": {
+		"prefix": ["justify-content--space-between"],
+		"body": ["justify-content--space-between"]
+	},
+	"justify-content--space-around": {
+		"prefix": ["justify-content--space-around"],
+		"body": ["justify-content--space-around"]
+	},
+	"align-items--flex-start": {
+		"prefix": ["align-items--flex-start"],
+		"body": ["align-items--flex-start"]
+	},
+	"align-items--flex-end": {
+		"prefix": ["align-items--flex-end"],
+		"body": ["align-items--flex-end"]
+	},
+	"align-items--center": {
+		"prefix": ["align-items--center"],
+		"body": ["align-items--center"]
+	},
+	"align-items--stretch": {
+		"prefix": ["align-items--stretch"],
+		"body": ["align-items--stretch"]
+	},
+	"align-items--baseline": {
+		"prefix": ["align-items--baseline"],
+		"body": ["align-items--baseline"]
+	},
+	"align-self--flex-start": {
+		"prefix": ["align-self--flex-start"],
+		"body": ["align-self--flex-start"]
+	},
+	"align-self--flex-end": {
+		"prefix": ["align-self--flex-end"],
+		"body": ["align-self--flex-end"]
+	},
+	"align-self--center": {
+		"prefix": ["align-self--center"],
+		"body": ["align-self--center"]
+	},
+	"align-self--stretch": {
+		"prefix": ["align-self--stretch"],
+		"body": ["align-self--stretch"]
+	},
+	"flex-direction--row": {
+		"prefix": ["flex-direction--row"],
+		"body": ["flex-direction--row"]
+	},
+	"flex-direction--row-reverse": {
+		"prefix": ["flex-direction--row-reverse"],
+		"body": ["flex-direction--row-reverse"]
+	},
+	"flex-direction--column": {
+		"prefix": ["flex-direction--column"],
+		"body": ["flex-direction--column"]
+	},
+	"flex-direction--column-reverse": {
+		"prefix": ["flex-direction--column-reverse"],
+		"body": ["flex-direction--column-reverse"]
+	},
+	"flex-wrap--nowrap": {
+		"prefix": ["flex-wrap--nowrap"],
+		"body": ["flex-wrap--nowrap"]
+	},
+	"flex-wrap--wrap": {
+		"prefix": ["flex-wrap--wrap"],
+		"body": ["flex-wrap--wrap"]
+	},
+	"flex-grow--true": {
+		"prefix": ["flex-grow--true"],
+		"body": ["flex-grow--true"]
+	},
+	"font-weight--regular": {
+		"prefix": ["font-weight--regular"],
+		"body": ["font-weight--regular"]
+	},
+	"font-weight--medium": {
+		"prefix": ["font-weight--medium"],
+		"body": ["font-weight--medium"]
+	},
+	"font-weight--bold": {
+		"prefix": ["font-weight--bold"],
+		"body": ["font-weight--bold"]
+	},
+	"font-style--normal": {
+		"prefix": ["font-style--normal"],
+		"body": ["font-style--normal"]
+	},
+	"font-style--italic": {
+		"prefix": ["font-style--italic"],
+		"body": ["font-style--italic"]
+	},
+	"text-transform--uppercase": {
+		"prefix": ["text-transform--uppercase"],
+		"body": ["text-transform--uppercase"]
+	},
+	"text-transform--lowercase": {
+		"prefix": ["text-transform--lowercase"],
+		"body": ["text-transform--lowercase"]
+	},
+	"text-transform--capitalize": {
+		"prefix": ["text-transform--capitalize"],
+		"body": ["text-transform--capitalize"]
+	},
+	"text-transform--none": {
+		"prefix": ["text-transform--none"],
+		"body": ["text-transform--none"]
+	},
+	"rh-animation--fade-in": {
+		"prefix": ["rh-animation--fade-in"],
+		"body": ["rh-animation--fade-in"]
+	},
+	"rh-animation--top-fade-in": {
+		"prefix": ["rh-animation--top-fade-in"],
+		"body": ["rh-animation--top-fade-in"]
+	},
+	"rh-animation--bottom-fade-in": {
+		"prefix": ["rh-animation--bottom-fade-in"],
+		"body": ["rh-animation--bottom-fade-in"]
+	},
+	"rh-animation--scale-in": {
+		"prefix": ["rh-animation--scale-in"],
+		"body": ["rh-animation--scale-in"]
+	},
+	"rh-animation--top-scale-in": {
+		"prefix": ["rh-animation--top-scale-in"],
+		"body": ["rh-animation--top-scale-in"]
+	},
+	"rh-animation--bottom-scale-in": {
+		"prefix": ["rh-animation--bottom-scale-in"],
+		"body": ["rh-animation--bottom-scale-in"]
+	},
+	"rh-background--header": {
+		"prefix": ["rh-background--header(#1D293A)"],
+		"body": ["rh-background--header"]
+	},
+	"rh-background--gray-alpha": {
+		"prefix": ["rh-background--gray-alpha(#D4D2D2)"],
+		"body": ["rh-background--gray-alpha"]
+	},
+	"rh-background--gray-beta": {
+		"prefix": ["rh-background--gray-beta(#E4E7EA)"],
+		"body": ["rh-background--gray-beta"]
+	},
+	"rh-background--black": {
+		"prefix": ["rh-background--black(#000000)"],
+		"body": ["rh-background--black"]
+	},
+	"rh-background--gray": {
+		"prefix": ["rh-background--gray(#555555)"],
+		"body": ["rh-background--gray"]
+	},
+	"rh-background--node-gray": {
+		"prefix": ["rh-background--node-gray(#999999)"],
+		"body": ["rh-background--node-gray"]
+	},
+	"rh-background--white": {
+		"prefix": ["rh-background--white(#FFFFFF)"],
+		"body": ["rh-background--white"]
+	},
+	"rh-background--status-confirm": {
+		"prefix": ["rh-background--status-confirm(#4A8E05)"],
+		"body": ["rh-background--status-confirm"]
+	},
+	"rh-background--status-warn": {
+		"prefix": ["rh-background--status-warn(#DE6700)"],
+		"body": ["rh-background--status-warn"]
+	},
+	"rh-background--error": {
+		"prefix": ["rh-background--error(#D0021B)"],
+		"body": ["rh-background--error"]
+	},
+	"rh-border--header": {
+		"prefix": ["rh-border--header(#1D293A)"],
+		"body": ["rh-border--header"]
+	},
+	"rh-border--gray-alpha": {
+		"prefix": ["rh-border--gray-alpha(#D4D2D2)"],
+		"body": ["rh-border--gray-alpha"]
+	},
+	"rh-border--gray-beta": {
+		"prefix": ["rh-border--gray-beta(#E4E7EA)"],
+		"body": ["rh-border--gray-beta"]
+	},
+	"rh-border--black": {
+		"prefix": ["rh-border--black(#000000)"],
+		"body": ["rh-border--black"]
+	},
+	"rh-border--gray": {
+		"prefix": ["rh-border--gray(#555555)"],
+		"body": ["rh-border--gray"]
+	},
+	"rh-border--node-gray": {
+		"prefix": ["rh-border--node-gray(#999999)"],
+		"body": ["rh-border--node-gray"]
+	},
+	"rh-border--white": {
+		"prefix": ["rh-border--white(#FFFFFF)"],
+		"body": ["rh-border--white"]
+	},
+	"rh-border--status-confirm": {
+		"prefix": ["rh-border--status-confirm(#4A8E05)"],
+		"body": ["rh-border--status-confirm"]
+	},
+	"rh-border--status-warn": {
+		"prefix": ["rh-border--status-warn(#DE6700)"],
+		"body": ["rh-border--status-warn"]
+	},
+	"rh-border--error": {
+		"prefix": ["rh-border--error(#D0021B)"],
+		"body": ["rh-border--error"]
+	},
+	"rh-color--header": {
+		"prefix": ["rh-color--header(#1D293A)"],
+		"body": ["rh-color--header"]
+	},
+	"rh-color--gray-alpha": {
+		"prefix": ["rh-color--gray-alpha(#D4D2D2)"],
+		"body": ["rh-color--gray-alpha"]
+	},
+	"rh-color--gray-beta": {
+		"prefix": ["rh-color--gray-beta(#E4E7EA)"],
+		"body": ["rh-color--gray-beta"]
+	},
+	"rh-color--black": {
+		"prefix": ["rh-color--black(#000000)"],
+		"body": ["rh-color--black"]
+	},
+	"rh-color--gray": {
+		"prefix": ["rh-color--gray(#555555)"],
+		"body": ["rh-color--gray"]
+	},
+	"rh-color--node-gray": {
+		"prefix": ["rh-color--node-gray(#999999)"],
+		"body": ["rh-color--node-gray"]
+	},
+	"rh-color--white": {
+		"prefix": ["rh-color--white(#FFFFFF)"],
+		"body": ["rh-color--white"]
+	},
+	"rh-color--status-confirm": {
+		"prefix": ["rh-color--status-confirm(#4A8E05)"],
+		"body": ["rh-color--status-confirm"]
+	},
+	"rh-color--status-warn": {
+		"prefix": ["rh-color--status-warn(#DE6700)"],
+		"body": ["rh-color--status-warn"]
+	},
+	"rh-color--error": {
+		"prefix": ["rh-color--error(#D0021B)"],
+		"body": ["rh-color--error"]
 	}
 }
