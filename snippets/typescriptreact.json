@@ -24,6 +24,44 @@
 			"let ${1:$TM_SELECTED_TEXT} = ${2:$TM_SELECTED_TEXT}"
 		]
 	},
+	"useCallback": {
+		"prefix": "useCallback",
+		"body": ["useCallback(() => {",
+			"\t${1:doSomething}",
+			"}, [${2:a}, ${3:b}])"
+		],
+		"description": "React useCallback() hook"
+	},
+	"useMemo": {
+		"prefix": "useMemo",
+		"body": ["useMemo(() => ${1:value}, [${2}])"],
+		"description": "React useMemo() hook"
+	},
+	"useState": {
+		"prefix": "useState",
+		"body": ["useState<${1:type}>(${2:initialValue})"],
+		"description": "React useState() hook"
+	},
+	"useEffect": {
+		"prefix": "useEffect",
+		"body": ["useEffect(() => {",
+			"\t${1:doSomething}",
+			"}, [${2:a}, ${3:b}])"
+		],
+		"description": "React useEffect() hook"
+	},
+
+	"itBlock": {
+		"prefix": "it",
+		"body": [
+			"it('Should $1', () => {",
+			"\t$2",
+			"})"
+    		],
+		"description": "Testing `it` block"
+	},
+
+
 	"UIKit-component": {
 		"prefix": ["<UI"],
 		"body": [
