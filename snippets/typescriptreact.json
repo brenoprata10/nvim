@@ -24,6 +24,7 @@
 			"let ${1:$TM_SELECTED_TEXT} = ${2:$TM_SELECTED_TEXT}"
 		]
 	},
+
 	"useCallback": {
 		"prefix": "useCallback",
 		"body": ["useCallback(() => {",
@@ -49,6 +50,18 @@
 			"}, [${2:a}, ${3:b}])"
 		],
 		"description": "React useEffect() hook"
+	},
+
+	"StyleSheet": {
+		"prefix": "StyleSheet",
+		"body": [
+			"StyleSheet.create({",
+			"\t${2:container}: {",
+			"\t\t${3}",
+			"\t},",
+			"})"
+		],
+		"description": "Create React Native Styled Components StyleSheet"
 	},
 
 	"itBlock": {
