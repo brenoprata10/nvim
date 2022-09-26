@@ -29,7 +29,7 @@
 		"prefix": "useCallback",
 		"body": ["useCallback(() => {",
 			"\t${1:doSomething}",
-			"}, [${2:a}, ${3:b}])"
+			"}, [${2:a}])"
 		],
 		"description": "React useCallback() hook"
 	},
@@ -47,7 +47,7 @@
 		"prefix": "useEffect",
 		"body": ["useEffect(() => {",
 			"\t${1:doSomething}",
-			"}, [${2:a}, ${3:b}])"
+			"}, [${2:a}])"
 		],
 		"description": "React useEffect() hook"
 	},
