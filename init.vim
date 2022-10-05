@@ -75,7 +75,6 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 let g:vsnip_snippet_dir = "~/.config/nvim/snippets"
-Plug 'rafamadriz/friendly-snippets'
 
 " LSP support
 Plug 'wbthomason/packer.nvim'
