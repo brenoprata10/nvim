@@ -18,6 +18,8 @@ Nvim editor config files
 
 ## Git Config
 - Store git credentials `git config --global credential.helper store`
+- Set nvim as default editor:
+ `export GIT_EDITOR=nvim && git config --global core.editor "nvim"` 
 
 ## TreeSitter
 - TSInstall typescript
