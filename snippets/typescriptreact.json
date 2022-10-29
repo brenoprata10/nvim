@@ -6,9 +6,11 @@
 	"react-component": {
 		"prefix": ["component", "react-component"],
 		"body": [
-			"export const ${1:$TM_SELECTED_TEXT} = (${2:$TM_SELECTED_TEXT}) => {",
+			"const ${1:$TM_SELECTED_TEXT} = (${2:$TM_SELECTED_TEXT}) => {",
 			"${3:$TM_SELECTED_TEXT}",
-			"}"
+			"}",
+			"",
+			"export default ${1}"
 		],
 		"description": "React functional component"
 	},
