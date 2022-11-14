@@ -7,7 +7,7 @@
 		"prefix": ["component", "react-component"],
 		"body": [
 			"const ${1:$TM_SELECTED_TEXT} = (${2:$TM_SELECTED_TEXT}) => {",
-			"${3:$TM_SELECTED_TEXT}",
+			"\t${3:$TM_SELECTED_TEXT}",
 			"}",
 			"",
 			"export default ${1}"
@@ -29,9 +29,9 @@
 
 	"useCallback": {
 		"prefix": "useCallback",
-		"body": ["useCallback(() => {",
-			"\t${1:doSomething}",
-			"}, [${2:a}])"
+		"body": ["useCallback((${1}) => {",
+			"\t${2}",
+			"}, [${3}])"
 		],
 		"description": "React useCallback() hook"
 	},
