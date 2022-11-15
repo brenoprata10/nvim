@@ -78,7 +78,7 @@
 
 
 	"UIKit-component": {
-		"prefix": ["<UI"],
+		"prefix": ["<UIKit"],
 		"body": [
 			"<UIKit.${1:$TM_SELECTED_TEXT} />"
 		]

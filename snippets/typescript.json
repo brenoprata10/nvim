@@ -8,6 +8,24 @@
 		],
 		"description": "Interface Definition"
 	},	
+	"Enum Definition": {
+		"prefix": "enum",
+		"body": [
+			"enum ${1:name} {",
+			"\t$2",
+			"}"
+		],
+		"description": "Enum Definition"
+	},	
+	"Type Definition": {
+		"prefix": "type",
+		"body": [
+			"type ${1:name} {",
+			"\t$2",
+			"}"
+		],
+		"description": "Type Definition"
+	},	
 	"For Loop": {
 		"prefix": "for",
 		"body": [
