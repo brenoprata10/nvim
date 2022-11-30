@@ -10,7 +10,7 @@ Nvim editor config files
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
-- [Node](https://www.stewright.me/2022/01/tutorial-install-nodejs-16-on-ubuntu-20-04/)
+- [Node](https://www.itzgeek.com/how-tos/linux/fedora-how-tos/how-to-install-node-js-on-fedora.html)
 - [typescript-language-server](https://www.npmjs.com/package/typescript-language-server)
 - [vscode-langservers-extracted](https://github.com/hrsh7th/vscode-langservers-extracted)
 - [Scrcpy](https://github.com/Genymobile/scrcpy) - Mirror android screen
