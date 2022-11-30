@@ -24,8 +24,8 @@ function M.setup(client, bufnr)
 	M.buf_map(bufnr, "n", "gpi", ":GoToPreviewImpl<CR>")
 	M.buf_map(bufnr, "n", "gpc", ":CloseGoToPreview<CR>")
 	M.buf_map(bufnr, "n", "tf", ":OpenFloatDiag<CR>")
-	client.resolved_capabilities.document_formatting = false
-	client.resolved_capabilities.document_range_formatting = false
+	client.server_capabilities.document_formatting = false
+	client.server_capabilities.document_range_formatting = false
 end
 
 return M
