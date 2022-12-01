@@ -43,8 +43,6 @@ lsp.tsserver.setup({
 		})
 		-- required to fix code action ranges and filter diagnostics
 		lsp_ts_utils.setup_client(client)
-		-- no default maps, so you may want to define some here
-		local opts = { silent = true }
 
 		attach_common.buf_map(bufnr, "n", "gs", ":TSLspOrganize<CR>")
 		attach_common.buf_map(bufnr, "n", "go", ":TSLspImportAll<CR>")
@@ -62,7 +60,7 @@ lsp.eslint.setup({
       			vim.api.nvim_create_autocmd("BufWritePre", {
         			pattern = "*",
         			callback = function()
-          				vim.lsp.buf.formatting_sync()
+          				vim.lsp.buf.format(nil)
         			end,
         			group = au_lsp,
       			})
