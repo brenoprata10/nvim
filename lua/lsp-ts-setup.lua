@@ -60,7 +60,8 @@ lsp.eslint.setup({
       			vim.api.nvim_create_autocmd("BufWritePre", {
         			pattern = "*",
         			callback = function()
-          				vim.lsp.buf.format(nil)
+          				--vim.lsp.buf.format(nil)
+					vim.api.nvim_command("Prettier")
         			end,
         			group = au_lsp,
       			})
