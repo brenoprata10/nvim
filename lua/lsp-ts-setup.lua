@@ -61,7 +61,10 @@ lsp.eslint.setup({
         			pattern = "*",
         			callback = function()
           				--vim.lsp.buf.format(nil)
-					vim.api.nvim_command("Prettier")
+					local fileType = vim.bo.filetype
+					if fileType == 'typescript' or fileType == 'typescriptreact' then
+						vim.api.nvim_command("Prettier")
+					end
         			end,
         			group = au_lsp,
       			})
