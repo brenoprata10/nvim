@@ -94,6 +94,8 @@ Plug 'folke/trouble.nvim'
 " Lua plugin dev tool
 Plug 'folke/lua-dev.nvim'
 
+Plug 'ray-x/lsp_signature.nvim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -109,7 +111,10 @@ lua << EOF
 	require('nvim-highlight-colors').setup {
 		enable_tailwind = true
 	}
-	require("trouble").setup {}
+	require('trouble').setup {}
+	require('lsp_signature').setup {
+		hint_enable = false
+	}
 EOF
 
 map <C-n> :NERDTreeToggle<CR>
