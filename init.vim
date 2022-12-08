@@ -1,15 +1,15 @@
-set number
-set mouse=a
+set number "To display line numbers along the left side of a window
+set mouse=a "Add mouse support (scrolling, copy)
 
-set laststatus=2
+set laststatus=2 "To display the status line always
 
 " Native fuzzy search for vim
 " Append path to subfolders
 set path+=**
-" Display all matching files when tab complete
-set wildmenu
 
-set nohlsearch
+set wildmenu "Display all matching files when tab complete
+
+set nohlsearch "Stop highlighting all matches to a search
 
 set termguicolors
 set t_Co=256
@@ -35,7 +35,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 " Shows modified lines on left column
 Plug 'mhinz/vim-signify'
 Plug 'mattn/emmet-vim'
@@ -45,12 +45,12 @@ let g:dracula_italic = 0
 let g:dracula_colorterm = 0
 
 Plug 'wavded/vim-stylus'
+Plug 'petertriho/nvim-scrollbar'
 " Detect when file has been edited outside of vim
 Plug 'djoshea/vim-autoread'
 " Git Wrapper
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
-Plug 'pechorin/any-jump.vim'
 " Configuring AsyncRun command
 Plug 'skywind3000/asyncrun.vim'
 let g:asyncrun_open = 8
@@ -87,14 +87,12 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'rafcamlet/tabline-framework.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'brenoprata10/nvim-highlight-colors'
-Plug 'petertriho/nvim-scrollbar'
+Plug 'ray-x/lsp_signature.nvim'
 
 Plug 'folke/trouble.nvim'
 
 " Lua plugin dev tool
 Plug 'folke/lua-dev.nvim'
-
-Plug 'ray-x/lsp_signature.nvim'
 
 " Initialize plugin system
 call plug#end()
@@ -122,8 +120,10 @@ map <C-p> :Prettier<CR>
 map <C-h> :FzfLua oldfiles path_shorten=3<CR>
 map <C-r> :FzfLua files path_shorten=10<CR>
 nmap gc :FzfLua git_commits<CR>
-nmap gr :AnyJump<CR>
-xmap gr :AnyJumpVisual<CR>
+nmap gr :FzfLua lsp_references<CR>
+xmap gr :FzfLua grep_visual<CR>
+nmap gy :FzfLua lsp_definitions<CR>
+nmap gl :FzfLua live_grep_resume<CR>
 nnoremap <C-u> :UndotreeToggle<CR>
 
 "Yoink mappings
