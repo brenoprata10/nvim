@@ -113,6 +113,19 @@ lua << EOF
 	require('lsp_signature').setup {
 		hint_enable = false
 	}
+	require('fzf-lua').setup {
+		previewers = {
+			builtin = {
+				extensions = {
+					["png"] = { "viu", "-b" },
+					["jpg"] = { "viu", "-b" },
+					["gif"] = { "viu", "-b" },
+					["jpeg"] = { "viu", "-b" },
+					["svg"] = { "viu", "-b" },
+				}      
+			}
+		}
+	}
 EOF
 
 map <C-n> :NERDTreeToggle<CR>
