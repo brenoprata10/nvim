@@ -89,6 +89,10 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'brenoprata10/nvim-highlight-colors'
 Plug 'ray-x/lsp_signature.nvim'
 
+" Mason Config for LSPs
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+
 Plug 'folke/trouble.nvim'
 
 " Lua plugin dev tool
@@ -99,6 +103,10 @@ call plug#end()
 
 lua << EOF
 	require('nvim-cmp-setup')
+	require('mason').setup {}
+	require('mason-lspconfig').setup {
+		ensure_installed = { "sumneko_lua", "tsserver", "eslint" }
+	}
 	require('lsp-ts-setup')
 	require('lsp-lua-dev-setup')
 	require('lualine-setup')
@@ -136,7 +144,7 @@ nmap gc :FzfLua git_commits<CR>
 nmap gr :FzfLua lsp_references<CR>
 xmap gr :FzfLua grep_visual<CR>
 nmap gy :FzfLua lsp_definitions<CR>
-nmap gl :FzfLua live_grep_resume<CR>
+nmap gl :FzfLua live_grep<CR>
 nnoremap <C-u> :UndotreeToggle<CR>
 
 "Yoink mappings
