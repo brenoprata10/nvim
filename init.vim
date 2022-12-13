@@ -86,13 +86,13 @@ Plug 'rcarriga/nvim-notify'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'rafcamlet/tabline-framework.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'brenoprata10/nvim-highlight-colors'
 Plug 'ray-x/lsp_signature.nvim'
 
 " Mason Config for LSPs
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 
+Plug 'brenoprata10/nvim-highlight-colors'
 Plug 'folke/trouble.nvim'
 
 " Lua plugin dev tool
