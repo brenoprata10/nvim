@@ -23,7 +23,3 @@ Nvim editor config files
 ## TreeSitter
 - TSInstall typescript
 - TSInstall javascript
-
-## Install lsp servers
-- VS language servers
-- [lua-language-server](https://github.com/sumneko/lua-language-server) - Create directory under Documents/lua-language-server/bin
