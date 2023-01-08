@@ -98,6 +98,9 @@ Plug 'folke/trouble.nvim'
 " Lua plugin dev tool
 Plug 'folke/lua-dev.nvim'
 
+" Spell check support
+Plug 'kamykn/spelunker.vim'
+
 " Initialize plugin system
 call plug#end()
 
