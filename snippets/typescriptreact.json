@@ -551,9 +551,9 @@
 		"prefix": ["rh-background--gray(#555555)"],
 		"body": ["rh-background--gray"]
 	},
-	"rh-background--node-gray": {
-		"prefix": ["rh-background--node-gray(#999999)"],
-		"body": ["rh-background--node-gray"]
+	"rh-background--note-gray": {
+		"prefix": ["rh-background--note-gray(#999999)"],
+		"body": ["rh-background--note-gray"]
 	},
 	"rh-background--white": {
 		"prefix": ["rh-background--white(#FFFFFF)"],
