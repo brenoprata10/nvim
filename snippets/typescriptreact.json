@@ -591,9 +591,9 @@
 		"prefix": ["rh-border--gray(#555555)"],
 		"body": ["rh-border--gray"]
 	},
-	"rh-border--node-gray": {
-		"prefix": ["rh-border--node-gray(#999999)"],
-		"body": ["rh-border--node-gray"]
+	"rh-border--note-gray": {
+		"prefix": ["rh-border--note-gray(#999999)"],
+		"body": ["rh-border--note-gray"]
 	},
 	"rh-border--white": {
 		"prefix": ["rh-border--white(#FFFFFF)"],
@@ -631,9 +631,9 @@
 		"prefix": ["rh-color--gray(#555555)"],
 		"body": ["rh-color--gray"]
 	},
-	"rh-color--node-gray": {
-		"prefix": ["rh-color--node-gray(#999999)"],
-		"body": ["rh-color--node-gray"]
+	"rh-color--note-gray": {
+		"prefix": ["rh-color--note-gray(#999999)"],
+		"body": ["rh-color--note-gray"]
 	},
 	"rh-color--white": {
 		"prefix": ["rh-color--white(#FFFFFF)"],
