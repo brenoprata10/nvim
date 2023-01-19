@@ -101,6 +101,8 @@ Plug 'folke/lua-dev.nvim'
 " Spell check support
 Plug 'kamykn/spelunker.vim'
 
+Plug 'phaazon/hop.nvim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -137,6 +139,7 @@ lua << EOF
 			}
 		}
 	}
+	require('hop').setup {}
 EOF
 
 map <C-n> :NERDTreeToggle<CR>
@@ -149,6 +152,7 @@ xmap gr :FzfLua grep_visual<CR>
 nmap gy :FzfLua lsp_definitions<CR>
 nmap gl :FzfLua live_grep<CR>
 nnoremap <C-u> :UndotreeToggle<CR>
+nmap ge :HopWord <CR>
 
 "Yoink mappings
 nmap <c-a> <plug>(YoinkPostPasteSwapBack)
