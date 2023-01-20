@@ -54,17 +54,17 @@ lsp.eslint.setup({
 	capabilities = client_capabilities,
 	flags = { debounce_text_changes = 500 },
 	on_attach = function(client, bufnr)
-		client.server_capabilities.document_formatting = true
-		if client.server_capabilities.document_formatting then
+		client.server_capabilities.documentFormattingProvider = true
+		if client.server_capabilities.documentFormattingProvider then
       			local au_lsp = vim.api.nvim_create_augroup("eslint_lsp", { clear = true })
       			vim.api.nvim_create_autocmd("BufWritePre", {
         			pattern = "*",
         			callback = function()
-          				--vim.lsp.buf.format(nil)
-					local fileType = vim.bo.filetype
-					if fileType == 'typescript' or fileType == 'typescriptreact' then
-						vim.api.nvim_command("Prettier")
-					end
+          				vim.lsp.buf.format(nil)
+					--local fileType = vim.bo.filetype
+					--if fileType == 'typescript' or fileType == 'typescriptreact' then
+					--	vim.api.nvim_command("Prettier")
+					--end
         			end,
         			group = au_lsp,
       			})
