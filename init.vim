@@ -152,7 +152,7 @@ xmap gr :FzfLua grep_visual<CR>
 nmap gy :FzfLua lsp_definitions<CR>
 nmap gl :FzfLua live_grep<CR>
 nnoremap <C-u> :UndotreeToggle<CR>
-nmap ge :HopWord <CR>
+nmap l :HopWord <CR>
 
 "Yoink mappings
 nmap <c-a> <plug>(YoinkPostPasteSwapBack)

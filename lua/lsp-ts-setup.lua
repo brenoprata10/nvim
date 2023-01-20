@@ -60,11 +60,11 @@ lsp.eslint.setup({
       			vim.api.nvim_create_autocmd("BufWritePre", {
         			pattern = "*",
         			callback = function()
-          				vim.lsp.buf.format(nil)
-					--local fileType = vim.bo.filetype
-					--if fileType == 'typescript' or fileType == 'typescriptreact' then
-					--	vim.api.nvim_command("Prettier")
-					--end
+          				--vim.lsp.buf.format(nil)
+					local fileType = vim.bo.filetype
+					if fileType == 'typescript' or fileType == 'typescriptreact' then
+						vim.api.nvim_command("Prettier")
+					end
         			end,
         			group = au_lsp,
       			})
