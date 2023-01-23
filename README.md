@@ -10,6 +10,8 @@ Nvim editor config files
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+- [Zoxide](https://github.com/ajeetdsouza/zoxide#installation) - Better cd command
+- [Exa](https://github.com/ogham/exa) - A modern replacement for ‘ls’ 
 - [Node](https://www.itzgeek.com/how-tos/linux/fedora-how-tos/how-to-install-node-js-on-fedora.html)
 - [Scrcpy](https://github.com/Genymobile/scrcpy) - Mirror android screen
 - [RipGrip](https://github.com/BurntSushi/ripgrep#installation) - Better Fzf search behavior(properly excludes node_modules)
