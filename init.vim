@@ -22,7 +22,7 @@ set shortmess+=c
 set relativenumber
 
 " Ignore node_modules
-set wildignore+=*/node_modules/*
+set wildignore+=*/node_modules/*,package-lock.json
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
@@ -137,6 +137,9 @@ lua << EOF
 					["svg"] = { "viu", "-b" },
 				}      
 			}
+		},
+		grep = {
+			cmd = "rg --vimgrep -g '!{.git,node_modules,package-lock.json}'",
 		}
 	}
 	require('hop').setup {}
