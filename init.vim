@@ -156,6 +156,7 @@ nmap gy :FzfLua lsp_definitions<CR>
 nmap gl :FzfLua live_grep<CR>
 nnoremap <C-u> :UndotreeToggle<CR>
 nmap l :HopWord <CR>
+tmap <Esc> <C-\><C-n>
 
 "Yoink mappings
 nmap <c-a> <plug>(YoinkPostPasteSwapBack)
