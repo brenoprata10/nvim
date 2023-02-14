@@ -4,7 +4,7 @@ local attach_common = require("attach-common")
 
 require("neodev").setup()
 
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
 	capabilities = capabilities,
 	settings = {
 		Lua = {
