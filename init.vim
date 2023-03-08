@@ -103,6 +103,8 @@ Plug 'kamykn/spelunker.vim'
 
 Plug 'phaazon/hop.nvim'
 
+Plug 'rareitems/printer.nvim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -143,10 +145,18 @@ lua << EOF
 		}
 	}
 	require('hop').setup {}
+
+	require('printer').setup({
+		keymap = "<C-p>",
+		formatters = {
+		typescriptreact = function(_, text_var)
+			return string.format('console.log({%s})', text_var)
+		end,
+            },
+	})
 EOF
 
 map <C-n> :NERDTreeToggle<CR>
-map <C-p> :Prettier<CR>
 map <C-h> :FzfLua oldfiles path_shorten=3<CR>
 map <C-r> :FzfLua files path_shorten=10<CR>
 nmap gc :FzfLua git_commits<CR>
