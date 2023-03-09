@@ -71,3 +71,9 @@ lsp.eslint.setup({
     		end
   	end,
 })
+
+lsp.cssmodules_ls.setup {
+	on_attach = function(client, bufnr)
+		attach_common.setup(client, bufnr)
+	end
+}
