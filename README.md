@@ -14,12 +14,11 @@ Nvim editor config files
 - [Exa](https://github.com/ogham/exa) - A modern replacement for ‘ls’ 
 - [Bat](https://github.com/sharkdp/bat#installation) - A modern replacement to 'cat'
 - [Node](https://www.itzgeek.com/how-tos/linux/fedora-how-tos/how-to-install-node-js-on-fedora.html)
-- [Scrcpy](https://github.com/Genymobile/scrcpy) - Mirror android screen
 - [RipGrip](https://github.com/BurntSushi/ripgrep#installation) - Better Fzf search behavior(properly excludes node_modules)
 ### Optional:
+- [Ranger](https://github.com/ranger/ranger) - Vim Inspired File Manager
 - [Rust ToolChain](https://www.rust-lang.org/tools/install) - Needed for SnipRun to work
 - [TS Packages](`npm install -g ts-node typescript`) - Needed for SnipRun to work
-- [Viu](https://github.com/atanunq/viu) - Load images on the terminal
 
 ## Git Config
 - Store git credentials `git config --global credential.helper store`
