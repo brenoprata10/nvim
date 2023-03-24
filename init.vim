@@ -103,7 +103,7 @@ Plug 'kamykn/spelunker.vim'
 
 Plug 'phaazon/hop.nvim'
 
-Plug 'rareitems/printer.nvim'
+Plug 'm4xshen/autoclose.nvim'
 
 " Initialize plugin system
 call plug#end()
@@ -146,14 +146,7 @@ lua << EOF
 	}
 	require('hop').setup {}
 
-	require('printer').setup({
-		keymap = "<C-p>",
-		formatters = {
-		typescriptreact = function(_, text_var)
-			return string.format('console.log({%s})', text_var)
-		end,
-            },
-	})
+	require("autoclose").setup()
 EOF
 
 map <C-n> :NERDTreeToggle<CR>
