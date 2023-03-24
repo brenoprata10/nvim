@@ -77,3 +77,15 @@ lsp.cssmodules_ls.setup {
 		attach_common.setup(client, bufnr)
 	end
 }
+
+lsp.tailwindcss.setup({
+    settings = {
+	    tailwindCSS = {
+		    experimental = {
+			    classRegex = {
+                    "tailwind\\('([^)]*)\\')", "'([^']*)'"
+		    	    },
+		    },
+	    },
+    },
+})

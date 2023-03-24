@@ -112,7 +112,7 @@ lua << EOF
 	require('nvim-cmp-setup')
 	require('mason').setup {}
 	require('mason-lspconfig').setup {
-		ensure_installed = { "lua_ls", "tsserver", "eslint", "cssmodules_ls" }
+		ensure_installed = { "lua_ls", "tsserver", "eslint", "cssmodules_ls"}
 	}
 	require('lsp-ts-setup')
 	require('lsp-lua-dev-setup')
