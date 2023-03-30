@@ -2,7 +2,7 @@ local render = function(f)
 
 	f.make_tabs(function(info)
 		local icon_color = f.icon_color(info.filename)
-		if string.find(info.filename, "%.ts") then
+		if info.filename and string.find(info.filename, "%.ts") then
 			icon_color = '#3178c6'
 		end
 
