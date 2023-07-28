@@ -35,7 +35,13 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'dense-analysis/ale'
+let g:ale_fixers = {
+\   'typescript': ['prettier'],
+\   'typescriptreact': ['prettier'],
+\   'css': ['prettier'],
+\}
+
 " Shows modified lines on left column
 Plug 'mhinz/vim-signify'
 Plug 'mattn/emmet-vim'
