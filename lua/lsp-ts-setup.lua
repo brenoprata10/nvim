@@ -61,10 +61,10 @@ lsp.eslint.setup({
         			pattern = "*",
         			callback = function()
           				--vim.lsp.buf.format(nil)
-					local fileType = vim.bo.filetype
-					if fileType == 'typescript' or fileType == 'typescriptreact' then
-						vim.api.nvim_command("ALEFix")
-					end
+					--local fileType = vim.bo.filetype
+				--	if fileType == 'typescript' or fileType == 'typescriptreact' then
+				--		vim.api.nvim_command("ALEFix")
+				--	end
         			end,
         			group = au_lsp,
       			})

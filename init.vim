@@ -41,6 +41,10 @@ let g:ale_fixers = {
 \   'typescriptreact': ['prettier'],
 \   'css': ['prettier'],
 \}
+let g:ale_set_highlights = 0
+let g:ale_disable_lsp = 1
+let g:ale_use_neovim_diagnostics_api = 1
+let g:ale_fix_on_save = 1
 
 " Shows modified lines on left column
 Plug 'mhinz/vim-signify'
