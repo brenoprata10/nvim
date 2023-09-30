@@ -61,9 +61,6 @@ Plug 'djoshea/vim-autoread'
 " Git Wrapper
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
-" Configuring AsyncRun command
-Plug 'skywind3000/asyncrun.vim'
-let g:asyncrun_open = 8
 
 "Yoink Plugin
 Plug 'svermeulen/vim-yoink'
@@ -116,6 +113,9 @@ Plug 'phaazon/hop.nvim'
 Plug 'm4xshen/autoclose.nvim'
 Plug 'brenoprata10/vim-px-to-rem'
 
+Plug 'MunifTanjim/nui.nvim'
+Plug 'google/executor.nvim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -135,17 +135,6 @@ lua << EOF
 	require('nvim-highlight-colors').setup {
 		enable_tailwind = true,
 		custom_colors = {
-			{label = '%-%-theme%-font%-color', color = '#fff'},
-			{label = 'theme%-font', color = '#fff'},
-			{label = '%-%-theme%-background%-color', color = '#1d1d1d'},
-			{label = 'theme%-background', color = '#1d1d1d'},
-			{label = '%-%-theme%-primary%-color', color = 'rgb(57 57 53)'},
-			{label = 'theme%-primary', color = 'rgb(57 57 53)'},
-			{label = '%-%-theme%-secondary%-color', color = '#5a5d64'},
-			{label = 'theme%-secondary', color = '#5a5d64'},
-			{label = '%-%-theme%-contrast%-color', color = '#fff'},
-			{label = 'theme%-contrast', color = '#fff'},
-			{label = '%-%-theme%-accent%-color', color = 'darkgray'},
 			{label = 'theme%-accent', color = 'darkgray'},
 		}
 	}
@@ -172,6 +161,10 @@ lua << EOF
 	require('hop').setup {}
 
 	require("autoclose").setup()
+	require("executor").setup({
+		use_split = false
+	})
+	require('executor').statusline()
 EOF
 
 map <C-n> :NERDTreeToggle<CR>
@@ -185,6 +178,9 @@ nmap gl :FzfLua live_grep<CR>
 nnoremap <C-u> :UndotreeToggle<CR>
 nmap L :HopWord <CR>
 nmap l :HopChar2 <CR>
+nmap ext :ExecutorToggleDetail<CR>
+nmap exr :ExecutorRun<CR>
+nmap exs :ExecutorSetCommand<CR>
 tmap <Esc> <C-\><C-n>
 
 "Yoink mappings
