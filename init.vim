@@ -178,9 +178,9 @@ nmap gl :FzfLua live_grep<CR>
 nnoremap <C-u> :UndotreeToggle<CR>
 nmap L :HopWord <CR>
 nmap l :HopChar2 <CR>
-nmap ext :ExecutorToggleDetail<CR>
-nmap exr :ExecutorRun<CR>
-nmap exs :ExecutorSetCommand<CR>
+nmap xt :ExecutorToggleDetail<CR>
+nmap xr :ExecutorRun<CR>
+nmap xs :ExecutorSetCommand<CR>
 tmap <Esc> <C-\><C-n>
 
 "Yoink mappings
