@@ -162,7 +162,20 @@ lua << EOF
 
 	require("autoclose").setup()
 	require("executor").setup({
-		use_split = false
+		use_split = false,
+		notifications = {
+			task_started = true,
+			task_completed = true,
+			border = {
+				padding = {
+					top = 0,
+					bottom = 1,
+					left = 1,
+					right = 1,
+				},
+			      style = "rounded",
+			},
+ 		}
 	})
 	require('executor').statusline()
 EOF
