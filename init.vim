@@ -134,6 +134,9 @@ lua << EOF
 		hint_enable = false
 	}
 	require('fzf-lua').setup {
+		defaults = {
+			file_icons = false,
+		},
 		previewers = {
 			builtin = {
 				extensions = {

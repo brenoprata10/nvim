@@ -16,7 +16,6 @@ local render = function(f)
 
 
 		if info.filename then
-			f.add(f.icon(info.filename) .. ' ')
 			f.add{info.filename}
 			f.add(info.modified and ' ●')
 		else
@@ -30,8 +29,8 @@ local render = function(f)
   local errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
   local warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
 
-  f.add { '  ' .. errors, fg = "#e86671" }
-  f.add { '  ' .. warnings, fg = "#e5c07b"}
+  f.add { ' ❌ ' .. errors, fg = "#e86671" }
+  f.add { ' 🟡 ' .. warnings, fg = "#e5c07b"}
   f.add ' '
 end
 
