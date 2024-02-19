@@ -14,7 +14,7 @@ Nvim editor config files
 - [Zoxide](https://github.com/ajeetdsouza/zoxide#installation) - Better cd command
 - [Exa](https://github.com/ogham/exa) - A modern replacement for ‘ls’ 
 - [Bat](https://github.com/sharkdp/bat#installation) - A modern replacement to 'cat'
-- [Node]([https://www.itzgeek.com/how-tos/linux/fedora-how-tos/how-to-install-node-js-on-fedora.html](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating))
+- [Node](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 - [RipGrip](https://github.com/BurntSushi/ripgrep#installation) - Better Fzf search behavior(properly excludes node_modules)
 ### Optional:
 - [Ranger](https://github.com/ranger/ranger) - Vim Inspired File Manager
