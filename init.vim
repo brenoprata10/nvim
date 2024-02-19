@@ -47,10 +47,6 @@ let g:ale_fix_on_save = 1
 
 " Shows modified lines on left column
 Plug 'mhinz/vim-signify'
-" Dracula theme setup
-Plug 'dracula/vim', { 'as': 'dracula' }
-let g:dracula_italic = 0
-let g:dracula_colorterm = 0
 
 Plug 'petertriho/nvim-scrollbar'
 " Detect when file has been edited outside of vim
@@ -110,6 +106,7 @@ Plug 'brenoprata10/vim-px-to-rem'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'google/executor.nvim'
 Plug 'nvim-tree/nvim-tree.lua'
+Plug 'agude/vim-eldar'
 
 " Initialize plugin system
 call plug#end()
@@ -203,7 +200,7 @@ nmap gP <plug>(YoinkPaste_gP)
 " trouble
 nnoremap tt <cmd>TroubleToggle<cr>
 
-colorscheme dracula
+colorscheme eldar
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 highlight LineNr ctermbg=NONE

@@ -1,29 +1,29 @@
 local colors = {
 	blue   = '#80a0ff',
 	cyan   = '#79dac8',
-	black  = '#080808',
+	black  = '#000000',
 	white  = '#c6c6c6',
 	red    = '#ff5189',
-	violet = '#5CFF5C',
+	green  = '#5CFF5C',
 	grey   = '#303030',
 	transparent = '#fff',
 }
 
 local bubbles_theme = {
 	normal = {
-		a = { fg = colors.black, bg = colors.violet },
-    		b = { fg = colors.white, bg = colors.grey },
+		a = { fg = colors.white, bg = colors.black},
+    		b = { fg = colors.white, bg = colors.black},
     		c = { fg = colors.white, bg = colors.transparent},
   	},
 
   	insert = {
-		a = {fg = colors.black, bg = colors.blue} 
+		a = {fg = colors.white, bg = colors.black}
 	},
   	visual = {
-		a = {fg = colors.black, bg = colors.cyan} 
+		a = {fg = colors.cyan, bg = colors.black}
 	},
   	replace = {
-		a = {fg = colors.black, bg = colors.red} 
+		a = {fg = colors.white, bg = colors.black}
 	},
 
   	inactive = {
@@ -38,18 +38,18 @@ require('lualine').setup {
 	options = {
     		theme = bubbles_theme,
     		component_separators = '|',
-    		section_separators = { left = '', right = '' },
+    		section_separators = { left = '', right = '' },
   	},
   	sections = {
     		lualine_a = {
-      			{ 'mode', separator = { left = '' }, right_padding = 2 },
+      			{ 'mode', separator = { left = '' }, right_padding = 2 },
     		},
-    		lualine_b = { 'filename', 'branch' },
-    		lualine_c = { 'fileformat' },
+    		lualine_b = { 'filename' },
+    		lualine_c = {},
     		lualine_x = {},
-    		lualine_y = { 'filetype', 'progress' },
+    		lualine_y = { 'progress' },
     		lualine_z = {
-      			{ 'location', separator = { right = '' }, left_padding = 2 },
+      			{ 'location', separator = { right = '' }, left_padding = 2 },
     		},
   	},
   	inactive_sections = {
@@ -62,5 +62,5 @@ require('lualine').setup {
   	},
   	tabline = {},
   	extensions = {},
-}	
+}
 
