@@ -2,10 +2,10 @@ local lsp = require "lspconfig"
 local lsp_ts_utils = require("nvim-lsp-ts-utils")
 local attach_common = require("attach-common")
 local client_capabilities = vim.lsp.protocol.make_client_capabilities()
-local tsserver_capabilities = require('cmp_nvim_lsp').default_capabilities(client_capabilities)
+local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities(client_capabilities)
 
 lsp.tsserver.setup({
-	capabilities = tsserver_capabilities,
+	capabilities = lsp_capabilities,
 	init_options = lsp_ts_utils.init_options,
 	on_attach = function(client, bufnr)
 		lsp_ts_utils.setup({
@@ -48,64 +48,4 @@ lsp.tsserver.setup({
 		attach_common.buf_map(bufnr, "n", "go", ":TSLspImportAll<CR>")
 		attach_common.setup(client, bufnr)
 	end
-})
-
-lsp.eslint.setup({
-	capabilities = client_capabilities,
-	flags = { debounce_text_changes = 500 },
-	on_attach = function(client, bufnr)
-		client.server_capabilities.documentFormattingProvider = true
-		if client.server_capabilities.documentFormattingProvider then
-      			local au_lsp = vim.api.nvim_create_augroup("eslint_lsp", { clear = true })
-      			vim.api.nvim_create_autocmd("BufWritePre", {
-        			pattern = "*",
-        			callback = function()
-          				--vim.lsp.buf.format(nil)
-					--local fileType = vim.bo.filetype
-				--	if fileType == 'typescript' or fileType == 'typescriptreact' then
-				--		vim.api.nvim_command("ALEFix")
-				--	end
-        			end,
-        			group = au_lsp,
-      			})
-    		end
-  	end,
-})
-
-lsp.cssls.setup({
-	capabilities = tsserver_capabilities,
-	on_attach = function(client, bufnr)
-		attach_common.setup(client, bufnr)
-	end,
-	settings = {
-		css = {
-			validate = true,
-			lint = {
-				compatibleVendorPrefixes = "ignore",
-				vendorPrefix = "warning",
-				duplicateProperties = "warning",
-				emptyRules = "warning",
-				importStatement = "warning",
-				boxModel = "warning",
-				universalSelector = "warning",
-				zeroUnits = "warning",
-				fontFaceProperties = "warning",
-				hexColorLength = "warning",
-				argumentsInColorFunction = "error",
-				unknownProperties = "warning",
-			},
-		},
-	},
-})
-
-lsp.tailwindcss.setup({
-    settings = {
-	    tailwindCSS = {
-		    experimental = {
-			    classRegex = {
-                    "tailwind\\('([^)]*)\\')", "'([^']*)'"
-		    	    },
-		    },
-	    },
-    },
 })

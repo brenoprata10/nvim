@@ -48,18 +48,14 @@ let g:ale_fix_on_save = 1
 
 " Shows modified lines on left column
 Plug 'mhinz/vim-signify'
-Plug 'mattn/emmet-vim'
 " Dracula theme setup
 Plug 'dracula/vim', { 'as': 'dracula' }
 let g:dracula_italic = 0
 let g:dracula_colorterm = 0
 
-Plug 'wavded/vim-stylus'
 Plug 'petertriho/nvim-scrollbar'
 " Detect when file has been edited outside of vim
 Plug 'djoshea/vim-autoread'
-" Git Wrapper
-Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
 
 "Yoink Plugin
@@ -88,16 +84,15 @@ Plug 'wbthomason/packer.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
+Plug 'ray-x/lsp_signature.nvim'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+
 Plug 'rmagatti/goto-preview'
 Plug 'rcarriga/nvim-notify'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'rafcamlet/tabline-framework.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'ray-x/lsp_signature.nvim'
-
-" Mason Config for LSPs
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
 
 Plug 'brenoprata10/nvim-highlight-colors'
 Plug 'folke/trouble.nvim'
@@ -120,13 +115,8 @@ Plug 'google/executor.nvim'
 call plug#end()
 
 lua << EOF
-	require('nvim-cmp-setup')
-	require('mason').setup {}
-	require('mason-lspconfig').setup {
-		ensure_installed = { "lua_ls", "tsserver", "eslint", "cssls", "tailwindcss"}
-	}
-	require('lsp-ts-setup')
-	require('lsp-lua-dev-setup')
+	require('lsp/setup')
+
 	require('lualine-setup')
 	require('notify-setup')
 	require('tabline-setup')
@@ -206,11 +196,6 @@ nmap P <plug>(YoinkPaste_P)
 
 nmap gp <plug>(YoinkPaste_gp)
 nmap gP <plug>(YoinkPaste_gP)
-
-" Git vim-fugitive.
-map <C-g> :Gvdiffsplit!<CR>
-nnoremap glb :diffget //2<CR>
-nnoremap grb :diffget //3<CR>
 
 " trouble
 nnoremap tt <cmd>TroubleToggle<cr>
