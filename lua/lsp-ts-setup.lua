@@ -72,11 +72,31 @@ lsp.eslint.setup({
   	end,
 })
 
-lsp.cssmodules_ls.setup {
+lsp.cssls.setup({
+	capabilities = tsserver_capabilities,
 	on_attach = function(client, bufnr)
 		attach_common.setup(client, bufnr)
-	end
-}
+	end,
+	settings = {
+		css = {
+			validate = true,
+			lint = {
+				compatibleVendorPrefixes = "ignore",
+				vendorPrefix = "warning",
+				duplicateProperties = "warning",
+				emptyRules = "warning",
+				importStatement = "warning",
+				boxModel = "warning",
+				universalSelector = "warning",
+				zeroUnits = "warning",
+				fontFaceProperties = "warning",
+				hexColorLength = "warning",
+				argumentsInColorFunction = "error",
+				unknownProperties = "warning",
+			},
+		},
+	},
+})
 
 lsp.tailwindcss.setup({
     settings = {

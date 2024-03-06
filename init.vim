@@ -123,7 +123,7 @@ lua << EOF
 	require('nvim-cmp-setup')
 	require('mason').setup {}
 	require('mason-lspconfig').setup {
-		ensure_installed = { "lua_ls", "tsserver", "eslint", "cssmodules_ls", "tailwindcss"}
+		ensure_installed = { "lua_ls", "tsserver", "eslint", "cssls", "tailwindcss"}
 	}
 	require('lsp-ts-setup')
 	require('lsp-lua-dev-setup')
@@ -134,8 +134,9 @@ lua << EOF
 	require('goto-preview').setup {}
 	require('nvim-highlight-colors').setup {
 		enable_tailwind = true,
+		render = 'virtual',
 		custom_colors = {
-			{label = 'theme%-accent', color = 'darkgray'},
+			{label = '%-%-theme%-background%-color', color = '#23222f'},
 		}
 	}
 	require('trouble').setup {}
