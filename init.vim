@@ -125,9 +125,7 @@ lua << EOF
 	require('nvim-highlight-colors').setup {
 		enable_tailwind = true,
 		render = 'virtual',
-		custom_colors = {
-			{label = '%-%-theme%-background%-color', color = '#23222f'},
-		}
+		virtual_symbol = "⬤",
 	}
 	require('trouble').setup {}
 	require('lsp_signature').setup {
