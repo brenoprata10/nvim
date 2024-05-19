@@ -11,6 +11,8 @@ lsp.eslint.setup({
       			vim.api.nvim_create_autocmd("BufWritePre", {
         			pattern = "*",
         			group = au_lsp,
+				callback = function ()
+				end
       			})
     		end
   	end,
