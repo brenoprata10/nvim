@@ -45,5 +45,8 @@ cmp.setup({
       		{ name = 'vsnip' }
     	}, {
       		{ name = 'buffer' },
-    	})
+    	}),
+	formatting = {
+		format = require("nvim-highlight-colors").format
+	}
 })
