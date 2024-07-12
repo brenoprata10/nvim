@@ -180,8 +180,8 @@ xmap gr :FzfLua grep_visual<CR>
 nmap gy :FzfLua lsp_definitions<CR>
 nmap gl :FzfLua live_grep<CR>
 nnoremap <C-u> :UndotreeToggle<CR>
-nmap L :HopWord <CR>
-nmap l :HopChar2 <CR>
+nmap l :HopWord <CR>
+nmap L :HopChar2 <CR>
 nmap mt :ExecutorToggleDetail<CR>
 nmap mr :ExecutorRun<CR>
 nmap ms :ExecutorSetCommand<CR>
