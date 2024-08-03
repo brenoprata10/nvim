@@ -29,3 +29,5 @@ Nvim editor config files
 ## TreeSitter
 - TSInstall typescript
 - TSInstall javascript
+- TSInstall markdown
+- TSInstall markdown-inline
