@@ -4,7 +4,7 @@ local attach_common = require("attach-common")
 local client_capabilities = vim.lsp.protocol.make_client_capabilities()
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities(client_capabilities)
 
-lsp.tsserver.setup({
+lsp.ts_ls.setup({
 	capabilities = lsp_capabilities,
 	init_options = lsp_ts_utils.init_options,
 	on_attach = function(client, bufnr)

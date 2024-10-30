@@ -110,7 +110,6 @@ Plug 'brenoprata10/vim-px-to-rem'
 
 Plug 'MunifTanjim/nui.nvim'
 Plug 'google/executor.nvim'
-Plug 'OXY2DEV/markview.nvim'
 
 " Initialize plugin system
 call plug#end()
