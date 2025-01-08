@@ -174,7 +174,7 @@ vim.g.loaded_netrwPlugin = 1
 	require("nvim-tree").setup()
 EOF
 
-map <C-n> :NvimTreeOpen<CR>
+map <C-n> :NvimTreeToggle<CR>
 map <C-h> :FzfLua oldfiles path_shorten=5<CR>
 map <C-r> :FzfLua files path_shorten=16<CR>
 nmap gc :FzfLua git_commits<CR>
