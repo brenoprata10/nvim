@@ -33,7 +33,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
-Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 
 Plug 'dense-analysis/ale'
 let g:ale_fixers = {
@@ -110,11 +109,14 @@ Plug 'brenoprata10/vim-px-to-rem'
 
 Plug 'MunifTanjim/nui.nvim'
 Plug 'google/executor.nvim'
+Plug 'nvim-tree/nvim-tree.lua'
 
 " Initialize plugin system
 call plug#end()
 
 lua << EOF
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 	require('lsp/setup')
 
 	require('lualine-setup')
@@ -169,9 +171,10 @@ lua << EOF
  		}
 	})
 	require('executor').statusline()
+	require("nvim-tree").setup()
 EOF
 
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NvimTreeOpen<CR>
 map <C-h> :FzfLua oldfiles path_shorten=3<CR>
 map <C-r> :FzfLua files path_shorten=10<CR>
 nmap gc :FzfLua git_commits<CR>
