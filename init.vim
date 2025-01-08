@@ -175,8 +175,8 @@ vim.g.loaded_netrwPlugin = 1
 EOF
 
 map <C-n> :NvimTreeOpen<CR>
-map <C-h> :FzfLua oldfiles path_shorten=3<CR>
-map <C-r> :FzfLua files path_shorten=10<CR>
+map <C-h> :FzfLua oldfiles path_shorten=5<CR>
+map <C-r> :FzfLua files path_shorten=16<CR>
 nmap gc :FzfLua git_commits<CR>
 nmap gr :FzfLua lsp_references<CR>
 xmap gr :FzfLua grep_visual<CR>
