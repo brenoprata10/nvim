@@ -201,7 +201,7 @@ nmap gp <plug>(YoinkPaste_gp)
 nmap gP <plug>(YoinkPaste_gP)
 
 " trouble
-nnoremap tt <cmd>TroubleToggle<cr>
+nnoremap tt <cmd>Trouble diagnostics<cr>
 
 colorscheme dracula
 highlight Normal ctermbg=NONE
