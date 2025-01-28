@@ -99,9 +99,6 @@ Plug 'folke/trouble.nvim'
 " Lua plugin dev tool
 Plug 'folke/lua-dev.nvim'
 
-" Spell check support
-Plug 'kamykn/spelunker.vim'
-
 Plug 'phaazon/hop.nvim'
 
 Plug 'm4xshen/autoclose.nvim'
@@ -110,6 +107,7 @@ Plug 'brenoprata10/vim-px-to-rem'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'google/executor.nvim'
 Plug 'nvim-tree/nvim-tree.lua'
+Plug 'MeanderingProgrammer/render-markdown.nvim'
 
 " Initialize plugin system
 call plug#end()
@@ -172,6 +170,7 @@ vim.g.loaded_netrwPlugin = 1
 	})
 	require('executor').statusline()
 	require("nvim-tree").setup()
+	require('render-markdown').setup({})
 EOF
 
 map <C-n> :NvimTreeToggle<CR>
