@@ -109,6 +109,9 @@ Plug 'google/executor.nvim'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'MeanderingProgrammer/render-markdown.nvim'
 
+" Lua AI
+Plug 'olimorris/codecompanion.nvim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -121,10 +124,13 @@ vim.g.loaded_netrwPlugin = 1
 	require('notify-setup')
 	require('tabline-setup')
 	require("scrollbar").setup()
-	require('goto-preview').setup {}
+	--require('goto-preview').setup {}
 	require('nvim-highlight-colors').setup {
 		enable_tailwind = true,
 		render = 'virtual',
+		exclude_buffer = function(bufnr)
+			return vim.fn.getfsize(vim.api.nvim_buf_get_name(bufnr)) > 1000000 
+		end,
 		custom_colors = {
 			{label = '%-%-theme%-background%-color', color = '#23222f'},
 		}
@@ -171,6 +177,25 @@ vim.g.loaded_netrwPlugin = 1
 	require('executor').statusline()
 	require("nvim-tree").setup()
 	require('render-markdown').setup({})
+	require("codecompanion").setup({
+		strategies = {
+			chat = {
+				adapter = "ollama",
+			},
+			inline = {
+				adapter = "ollama",
+			}
+		},
+		adapters = {
+			ollama = function()
+				return require("codecompanion.adapters").extend("ollama", {
+					env = {
+						url = "http://localhost:11435",
+					}
+				})
+			end
+		}
+	})
 EOF
 
 map <C-n> :NvimTreeToggle<CR>
