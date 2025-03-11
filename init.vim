@@ -107,10 +107,12 @@ Plug 'brenoprata10/vim-px-to-rem'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'google/executor.nvim'
 Plug 'nvim-tree/nvim-tree.lua'
-Plug 'MeanderingProgrammer/render-markdown.nvim'
+Plug 'OXY2DEV/markview.nvim'
 
 " Lua AI
 Plug 'olimorris/codecompanion.nvim'
+
+Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
 
 " Initialize plugin system
 call plug#end()
@@ -176,7 +178,20 @@ vim.g.loaded_netrwPlugin = 1
 	})
 	require('executor').statusline()
 	require("nvim-tree").setup()
-	require('render-markdown').setup({})
+	require('markview').setup({
+		preview = {
+			filetypes = { "markdown", "codecompanion" },
+			ignore_buftypes = {},
+		},
+		display = {
+			diff = {
+				enabled = true,
+				layout = "vertical", -- vertical|horizontal split for default provider
+				opts = { "internal", "filler", "closeoff", "algorithm:patience", "followwrap", "linematch:120" },
+				provider = "mini_diff", -- default|mini_diff
+			},
+		}
+	})
 	require("codecompanion").setup({
 		strategies = {
 			chat = {
