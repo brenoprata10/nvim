@@ -39,7 +39,7 @@ vim.opt.shortmess:append("c")
 -- Enable termguicolors for colorschemes that support it
 vim.opt.termguicolors = true
 -- Set t_Co=256 (color mode)
-vim.opt.t_Co = 256
+vim.cmd('set t_Co=256')
 -- Turn on syntax highlighting
 vim.cmd('syntax on')
 -- Append path to subfolders
