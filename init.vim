@@ -110,7 +110,15 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'OXY2DEV/markview.nvim'
 
 " Lua AI
-Plug 'olimorris/codecompanion.nvim'
+" Deps
+Plug 'stevearc/dressing.nvim'
+
+" Optional deps
+Plug 'HakonHarnes/img-clip.nvim'
+
+" Yay, pass source=true if you want to build from source
+Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+"Plug 'olimorris/codecompanion.nvim'
 
 Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
 
@@ -180,7 +188,7 @@ vim.g.loaded_netrwPlugin = 1
 	require("nvim-tree").setup()
 	require('markview').setup({
 		preview = {
-			filetypes = { "markdown", "codecompanion" },
+			filetypes = { "markdown", "codecompanion", "Avante" },
 			ignore_buftypes = {},
 		},
 		display = {
@@ -192,23 +200,15 @@ vim.g.loaded_netrwPlugin = 1
 			},
 		}
 	})
-	require("codecompanion").setup({
-		strategies = {
-			chat = {
-				adapter = "ollama",
+	require('avante').setup({
+		provider = "ollama",
+		mappings = {
+			ask = "<leader>m", -- ask
+			edit = "<leader>n", -- edit
 			},
-			inline = {
-				adapter = "ollama",
-			}
-		},
-		adapters = {
-			ollama = function()
-				return require("codecompanion.adapters").extend("ollama", {
-					env = {
-						url = "http://localhost:11435",
-					}
-				})
-			end
+		ollama = {
+			model = "qwen2.5-coder:3b",
+			endpoint = "http://localhost:11435"
 		}
 	})
 EOF
