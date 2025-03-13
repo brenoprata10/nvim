@@ -16,6 +16,7 @@ return {
 				endpoint = "http://localhost:11435"
 			}
 		},
+		build = "make",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 			"stevearc/dressing.nvim",
