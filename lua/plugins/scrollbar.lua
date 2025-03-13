@@ -2,7 +2,7 @@ local colors = require("tokyonight.colors").setup()
 
 return {
 	{
-		"petertriho/nvim-scrollbar", 
+		"petertriho/nvim-scrollbar",
 		lazy = false,
 		opts = {
 		},

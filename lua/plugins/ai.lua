@@ -19,7 +19,7 @@ return {
 		build = "make",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
-			"stevearc/dressing.nvim",
+			--"stevearc/dressing.nvim",
 			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
 			--- The below dependencies are optional,
