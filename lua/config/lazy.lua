@@ -48,6 +48,13 @@ vim.opt.path:append("**")
 vim.opt.wildmenu = true
 -- Stop highlighting all matches to a search
 vim.opt.hlsearch = false
+-- auto-reload files when modified externally
+-- https://unix.stackexchange.com/a/383044
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = { "*" },
+})
 
 vim.opt.cmdheight = 2
 vim.opt.encoding = "utf-8"
@@ -65,3 +72,5 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = false },
 })
+
+require("lsp/setup")
