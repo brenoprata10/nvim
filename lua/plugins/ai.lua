@@ -13,8 +13,13 @@ return {
 			},
 			ollama = {
 				model = "qwen2.5-coder:3b",
+				--model = "stable-code:3b",
+				--model = "codellama:7b",
 				endpoint = "http://localhost:11435"
 			}
+		},
+		keys = {
+			{"<leader>o", "<cmd>AvanteToggle<cr>", desc = "Toggle Avante"}
 		},
 		build = "make",
 		dependencies = {
