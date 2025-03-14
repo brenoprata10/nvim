@@ -41,7 +41,7 @@ return {
 		dependencies = {"kyazdani42/nvim-web-devicons"},
 		config = function()
 
-			require('tabline_framework').setup { 
+			require('tabline_framework').setup {
 				render = render,
 				-- Default color of tabline items: tabs/bufs
 				-- if not set TF uses TabLine highlight group colors
