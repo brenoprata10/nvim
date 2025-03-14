@@ -16,6 +16,9 @@ return {
 				--model = "stable-code:3b",
 				--model = "codellama:7b",
 				endpoint = "http://localhost:11435"
+			},
+			behaviour = {
+				enable_token_counting = false
 			}
 		},
 		keys = {
