@@ -15,7 +15,7 @@ return {
 				model = "qwen2.5-coder:3b",
 				--model = "stable-code:3b",
 				--model = "codellama:7b",
-				endpoint = "http://localhost:11435"
+				endpoint = "http://localhost:11434"
 			},
 			behaviour = {
 				enable_token_counting = false
@@ -27,7 +27,7 @@ return {
 		build = "make",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
-			--"stevearc/dressing.nvim",
+			"stevearc/dressing.nvim",
 			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
 			--- The below dependencies are optional,
