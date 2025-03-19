@@ -10,7 +10,6 @@ return {
 			"hrsh7th/cmp-cmdline",
 			"hrsh7th/cmp-vsnip",
 			"hrsh7th/vim-vsnip",
-			"brenoprata10/nvim-highlight-colors"
 		},
 		config = function(_, opts)
 			local g = vim.g

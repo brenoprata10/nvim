@@ -26,7 +26,12 @@ return {
 				icons = {
 					-- Configure the base icons on the bufferline.
 					-- Valid options to display the buffer index and -number are `true`, 'superscript' and 'subscript'
-					buffer_index = true
+					buffer_index = true,
+					tabpages = false,
+					diagnostics = {
+						[vim.diagnostic.severity.ERROR] = {enabled = true, icon = '  '},
+						[vim.diagnostic.severity.WARN] = {enabled = true, icon = '  '},
+					},
 				}
 			},
 		},
