@@ -8,7 +8,7 @@ return {
 			require("sniprun").setup({
 				interpreter_options = {
 					TypeScript_original = {
-						compiler = 'node'
+						interpreter = 'node'
 					}
 				},
 			})
