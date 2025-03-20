@@ -19,7 +19,8 @@ return {
 			},
 			behaviour = {
 				enable_token_counting = false
-			}
+			},
+			hints = { enabled = false }
 		},
 		keys = {
 			{"<leader>o", "<cmd>AvanteToggle<cr>", desc = "Toggle Avante"}
