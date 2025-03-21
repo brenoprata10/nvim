@@ -18,6 +18,7 @@ return {
 				endpoint = "http://localhost:11434"
 			},
 			behaviour = {
+				enable_cursor_planning_mode = true,
 				enable_token_counting = false
 			},
 			hints = { enabled = false }
