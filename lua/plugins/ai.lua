@@ -38,23 +38,20 @@ return {
 			"hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
 			"ibhagwan/fzf-lua", -- for file_selector provider fzf
 			"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-			{
-				-- support for image pasting
-				"HakonHarnes/img-clip.nvim",
-				event = "VeryLazy",
-				opts = {
-					-- recommended settings
-					default = {
-						embed_image_as_base64 = false,
-						prompt_for_file_name = false,
-						drag_and_drop = {
-							insert_mode = true,
-						},
-						-- required for Windows users
-						use_absolute_path = true,
-					},
-				},
-			},
 		},
+	},
+	{
+		"github/copilot.vim",
+		event = "VeryLazy",
+		config = function()
+			vim.g.copilot_no_tab_map = true -- Disable default Tab mapping
+			vim.g.copilot_assume_mapped = true -- Assume mappings are handled
+			vim.api.nvim_set_keymap("i", "<C-\\>", 'copilot#Accept("<CR>")', { expr = true, silent = true, replace_keycodes = false })
+			vim.api.nvim_set_keymap("i", "<C-]>", "<Plug>(copilot-next)", { silent = true })
+			vim.api.nvim_set_keymap("i", "<C-[>", "<Plug>(copilot-previous)", { silent = true })
+			--vim.api.nvim_set_keymap("i", "<C-\\>", "<Plug>(copilot-dismiss)", { silent = true })
+			-- Restore <Esc> explicitly
+			vim.api.nvim_set_keymap("i", "<Esc>", "<Esc>", { noremap = true, silent = true })
+		end,
 	}
 }
