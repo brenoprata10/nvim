@@ -15,7 +15,7 @@ return {
 				model = "qwen2.5-coder:3b",
 				--model = "stable-code:3b",
 				--model = "codellama:7b",
-				endpoint = "http://localhost:11434"
+				endpoint = "http://localhost:11435"
 			},
 			behaviour = {
 				enable_cursor_planning_mode = true,
