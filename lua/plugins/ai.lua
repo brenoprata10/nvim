@@ -4,18 +4,18 @@ return {
 		event = "VeryLazy",
 		version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
 		opts = {
-			-- add any opts here
-			-- for example
 			provider = "ollama",
+			providers = {
+				ollama = {
+					model = "qwen2.5-coder:3b",
+					--model = "stable-code:3b",
+					--model = "codellama:7b",
+					endpoint = "http://192.168.178.44:11435"
+				}
+			},
 			mappings = {
 				ask = "<leader>m", -- ask
 				edit = "<leader>n", -- edit
-			},
-			ollama = {
-				model = "qwen2.5-coder:3b",
-				--model = "stable-code:3b",
-				--model = "codellama:7b",
-				endpoint = "http://localhost:11435"
 			},
 			behaviour = {
 				enable_cursor_planning_mode = true,
