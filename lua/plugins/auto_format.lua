@@ -7,8 +7,8 @@ return {
 			local g = vim.g
 
 			g.ale_fixers = {
-				typescript = {'prettier'},
-				typescriptreact = {'prettier'},
+				typescript = {'prettier', 'deno'},
+				typescriptreact = {'prettier', 'deno'},
 				css = {'prettier'}
 			}
 			g.ale_set_highlights = 0
