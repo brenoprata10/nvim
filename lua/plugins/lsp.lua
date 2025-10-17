@@ -13,7 +13,8 @@ return {
 				"eslint",
 				"cssls",
 				"tailwindcss@0.0.16",
-				"rust_analyzer"
+				"rust_analyzer",
+				"denols"
 			}
 		}
 	},

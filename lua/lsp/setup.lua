@@ -1,6 +1,7 @@
 -- Setup LSPs
 require('lsp.tsserver')
 require('lsp.eslint')
+require('lsp.deno')
 require('lsp.cssls')
 require('lsp.lua')
 require('lsp.tailwindcss')
