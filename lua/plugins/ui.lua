@@ -68,6 +68,9 @@ return {
 			-- Note taking
 			{ "<leader>n", "<cmd>lua Snacks.scratch()<cr>", desc = "Toggle Scratch Buffer" },
 			{ "<leader>N", "<cmd>lua Snacks.scratch.select()<cr>", desc = "Select Scratch Buffer" },
+
+			-- Notifications
+			{ "<leader>k", "<cmd>lua Snacks.notifier.show_history()<cr>", desc = "Show Message History" },
 		},
 	}
 }
