@@ -1,20 +1,12 @@
 return {
 	{
-		"dense-analysis/ale", 
-		lazy = false,
-		config = function()
-			-- Configuration goes here.
-			local g = vim.g
-
-			g.ale_fixers = {
-				typescript = {'prettier', 'deno'},
-				typescriptreact = {'prettier', 'deno'},
-				css = {'prettier'}
-			}
-			g.ale_set_highlights = 0
-			g.ale_disable_lsp = 1
-			g.ale_use_neovim_diagnostics_api = 1
-			g.ale_fix_on_save = 1
-		end
+		'stevearc/conform.nvim',
+		opts = {
+			format_on_save = { timeout_ms = 500, lsp_fallback = true },
+			formatters_by_ft = {
+				typescript = { 'prettier', 'deno' },
+				typescriptreact = { 'prettier' },
+			},
+		},
 	}
 }
