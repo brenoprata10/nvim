@@ -1,17 +1,16 @@
-local lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local attach_common = require("attach-common")
 
-lsp.lua_ls.setup({
+vim.lsp.config('lua_ls', {
 	capabilities = capabilities,
 	settings = {
 		Lua = {
-			runtime = {version = 'LuaJIT', path = vim.split(package.path, ';')},
-			completion = {enable = true, callSnippet = "Both"},
+			runtime = { version = 'LuaJIT', path = vim.split(package.path, ';') },
+			completion = { enable = true, callSnippet = "Both" },
 			diagnostics = {
 				enable = true,
-				globals = {'vim', 'describe'},
-				disable = {"lowercase-global"}
+				globals = { 'vim', 'describe' },
+				disable = { "lowercase-global" }
 			},
 			workspace = {
 				library = {
@@ -25,7 +24,9 @@ lsp.lua_ls.setup({
 			}
 		}
 	},
-    	on_attach = function(client, bufnr)
+	on_attach = function(client, bufnr)
 		attach_common.setup(client, bufnr)
-    	end
+	end
 })
+
+vim.lsp.enable('lua_ls')

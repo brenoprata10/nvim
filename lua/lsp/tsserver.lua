@@ -1,10 +1,9 @@
-local lsp = require "lspconfig"
 local lsp_ts_utils = require("nvim-lsp-ts-utils")
 local attach_common = require("attach-common")
 local client_capabilities = vim.lsp.protocol.make_client_capabilities()
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities(client_capabilities)
 
-lsp.ts_ls.setup({
+vim.lsp.config('ts_ls', {
 	capabilities = lsp_capabilities,
 	init_options = lsp_ts_utils.init_options,
 	on_attach = function(client, bufnr)
@@ -49,3 +48,5 @@ lsp.ts_ls.setup({
 		attach_common.setup(client, bufnr)
 	end
 })
+
+vim.lsp.enable('ts_ls')

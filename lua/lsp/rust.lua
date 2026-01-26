@@ -1,8 +1,7 @@
-local lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local attach_common = require("attach-common")
 
-lsp.rust_analyzer.setup({
+vim.lsp.config('rust_analyzer', {
 	capabilities = capabilities,
 	settings = {
 		['rust-analyzer'] = {
@@ -22,3 +21,5 @@ lsp.rust_analyzer.setup({
 		attach_common.setup(client, bufnr)
 	end
 })
+
+vim.lsp.enable('rust_analyzer')

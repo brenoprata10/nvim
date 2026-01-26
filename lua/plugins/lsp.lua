@@ -12,7 +12,7 @@ return {
 				"ts_ls",
 				"eslint",
 				"cssls",
-				"tailwindcss@0.0.16",
+				"tailwindcss",
 				"rust_analyzer",
 				"denols"
 			}
@@ -29,9 +29,9 @@ return {
 		opts = {
 			floating_window = false,
 			hint_prefix = {
-				above = "↙ ",  -- when the hint is on the line above the current line
-				current = "← ",  -- when the hint is on the same line
-				below = "↖ "  -- when the hint is on the line below the current line
+				above = "↙ ", -- when the hint is on the line above the current line
+				current = "← ", -- when the hint is on the same line
+				below = "↖ " -- when the hint is on the line below the current line
 			}
 		}
 	}

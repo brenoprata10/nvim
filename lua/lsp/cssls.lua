@@ -1,4 +1,3 @@
-local lsp = require "lspconfig"
 local attach_common = require("attach-common")
 local client_capabilities = vim.lsp.protocol.make_client_capabilities()
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities(client_capabilities)
@@ -20,7 +19,7 @@ local lint_config = {
 	},
 }
 
-lsp.cssls.setup({
+vim.lsp.config('cssls', {
 	capabilities = lsp_capabilities,
 	on_attach = function(client, bufnr)
 		attach_common.setup(client, bufnr)
@@ -31,3 +30,5 @@ lsp.cssls.setup({
 		less = lint_config,
 	},
 })
+
+vim.lsp.enable('cssls')

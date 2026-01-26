@@ -1,10 +1,12 @@
-local lsp = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local attach_common = require("attach-common")
 
-lsp.gopls.setup({
+vim.lsp.config('gopls', {
 	capabilities = capabilities,
-    	on_attach = function(client, bufnr)
+	on_attach = function(client, bufnr)
 		attach_common.setup(client, bufnr)
-    	end
+	end
 })
+
+
+vim.lsp.enable('gopls')
