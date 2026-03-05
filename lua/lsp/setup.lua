@@ -1,7 +1,8 @@
 -- Setup LSPs
 
 local cwd = vim.fn.getcwd()
-if string.match(cwd,'road%-62') then
+if string.match(cwd, 'analytics') then
+	print(cwd)
 	require('lsp.deno')
 else
 	require('lsp.tsserver')
